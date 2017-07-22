@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Neutra Text Bold Alt';
+  src: url('./Neutra Text Bold Alt.otf') format("opentype");
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #f7df1e;
+  font-family: 'Neutra Text Bold Alt', sans-serif;
+  font-size: 2rem;
+}
+
+main {
+  margin: 0 auto;
+  width: 50rem;
+  padding: 3rem 2rem;
+}
+
+h1 {
+  font-size: 7rem;
+}
+
+ol {
+  margin-top: 2rem;
+  list-style-position: inside;
+  list-style-type: decimal-leading-zero;
+}
+
+li {
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 31.250em) {
+  main {
+    width: 90%;
+  }
+}
