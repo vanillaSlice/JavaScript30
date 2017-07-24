@@ -1,4 +1,4 @@
-(function () {
+(() => {
 
   const keys = document.querySelectorAll('.key');
 
@@ -20,4 +20,4 @@
     this.classList.remove('playing');
   }
 
-}());
+})();
