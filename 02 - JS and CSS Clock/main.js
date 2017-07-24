@@ -16,7 +16,7 @@
     const hours = now.getHours();
     const hoursDegrees = ((hours / 12) * 360) + ((minutes / 60) * 30) + 90;
     hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
-    hourHand.style.transitionDuration = (hours === 0) ? '0s' : '0.5s';
+    hourHand.style.transitionDuration = (hours === 0 || hours === 12) ? '0s' : '0.5s';
   }
 
   setInterval(setDate, 1000);
