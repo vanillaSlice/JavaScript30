@@ -6,7 +6,7 @@
   }
 
   function toggleActive(e) {
-    if (e.propertyName.includes('flex')) {
+    if (e.propertyName === 'flex-grow' || e.propertyName === 'flex') {
       this.classList.toggle('open-active');
     }
   }

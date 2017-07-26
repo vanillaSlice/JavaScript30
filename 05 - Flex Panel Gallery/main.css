@@ -4,7 +4,7 @@ html {
 
 body {
   text-align: center;
-  background: #6b0f9c;
+  background: #4b0082;
   color: #fff;
   font-family: 'Amatic SC', cursive;
 }
@@ -15,7 +15,7 @@ body {
 
 .panels {
   min-height: 100vh;
-  overflow: hidden;
+  overflow-y: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,7 +65,7 @@ body {
   background-image: url('./ravenclaw.jpg');
 }
 
-.panel>* {
+.panel>p {
   margin: 0;
   width: 100%;
   -webkit-transition: -webkit-transform 0.5s;
@@ -86,18 +86,12 @@ body {
   align-items: center;
 }
 
-.panel>*:first-child {
-  -webkit-transform: translateY(-100%);
-  transform: translateY(-100%);
-}
-
-.panel.open-active>*:first-child,
-.panel.open-active>*:last-child {
+.panel.open-active>p {
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
 
-.panel>:last-child {
+.panel>p {
   -webkit-transform: translateY(100%);
   transform: translateY(100%);
 }
@@ -105,6 +99,7 @@ body {
 .panel p {
   text-transform: uppercase;
   text-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.72), 0 0 1.4rem rgba(0, 0, 0, 0.45);
+  padding: 1rem;
 }
 
 .panel.open {
