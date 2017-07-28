@@ -4,7 +4,8 @@ html {
 
 body {
   font-family: 'Helvetica Neue', sans-serif;
-  color: #000;
+  background-color: #1e1e1e;
+  color: #fff;
   text-align: center;
   font-size: 2rem;
 }
@@ -24,7 +25,9 @@ input.search {
   margin: 0 auto;
   text-align: center;
   outline: 0;
-  border: 1rem solid #f7f7f7;
+  background-color: #252526;
+  border: 1rem solid #333;
+  color: inherit;
   border-radius: 0.5rem;
   font-size: 4rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.12), inset 0 0 0.2rem rgba(0, 0, 0, 0.19);
@@ -37,9 +40,9 @@ input.search {
 }
 
 .suggestions li {
-  background: #fff;
+  background: #252526;
   list-style: none;
-  border-bottom: 0.1rem solid #d8d8d8;
+  border-bottom: 0.1rem solid #333;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.14);
   margin: 0;
   padding: 2rem;
@@ -57,15 +60,15 @@ input.search {
 .suggestions li:nth-child(even) {
   -webkit-transform: perspective(10rem) rotateX(3deg) translateY(0.2rem) scale(1.001);
   transform: perspective(10rem) rotateX(3deg) translateY(0.2rem) scale(1.001);
-  background: -webkit-linear-gradient(top, #fff 0%, #efefef 100%);
-  background: linear-gradient(to bottom, #fff 0%, #efefef 100%);
+  background: -webkit-linear-gradient(top, #252526 0%, #333 100%);
+  background: linear-gradient(to bottom, #252526 0%, #333 100%);
 }
 
 .suggestions li:nth-child(odd) {
   -webkit-transform: perspective(10rem) rotateX(-3deg) translateY(0.3rem);
   transform: perspective(10rem) rotateX(-3deg) translateY(0.3rem);
-  background: -webkit-linear-gradient(bottom, #fff 0%, #efefef 100%);
-  background: linear-gradient(to top, #fff 0%, #efefef 100%);
+  background: -webkit-linear-gradient(bottom, #252526 0%, #333 100%);
+  background: linear-gradient(to top, #252526 0%, #333 100%);
 }
 
 span.population {
@@ -73,12 +76,15 @@ span.population {
 }
 
 .hl {
-  background: rgb(0, 122, 204);
+  background: #0070cc;
 }
 
 @media (max-width: 31.25em) {
   .search-form {
     margin: 0;
     width: 100%;
+  }
+  input.search {
+    border: none;
   }
 }
