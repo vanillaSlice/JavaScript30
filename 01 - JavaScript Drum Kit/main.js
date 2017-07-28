@@ -4,7 +4,7 @@
 
   window.addEventListener('keydown', e => playSound(e.keyCode));
   keys.forEach(key => key.addEventListener('mousedown', () => playSound(key.dataset.key)));
-  keys.forEach(key => key.addEventListener('touchdown', () => playSound(key.dataset.key)));
+  keys.forEach(key => key.addEventListener('touchstart', () => playSound(key.dataset.key)));
 
   function playSound(keyCode) {
     const audio = document.querySelector(`audio[data-key="${keyCode}"]`);
