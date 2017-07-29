@@ -14,6 +14,7 @@ window.addEventListener('load', () => {
   function playSound(keyCode) {
     const sound = document.querySelector(`audio[data-key="${keyCode}"]`);
     const key = document.querySelector(`.key[data-key="${keyCode}"]`);
+        alert(sound + ' ' + key);
     if (!sound || !key) return;
     sound.currentTime = 0;
     sound.play();
@@ -32,9 +33,7 @@ window.addEventListener('load', () => {
   window.addEventListener('keydown', e => playSound(e.keyCode));
   keys.forEach(key => key.addEventListener('mousedown', () => playSound(key.dataset.key)));
   keys.forEach(key => key.addEventListener('touchstart', e => {
-    alert(key.dataset.key);
     e.preventDefault();
-    e.stopPropagation();
     playSound(key.dataset.key);
   }));
   keys.forEach(key => key.addEventListener('transitionend', removeTransition));
