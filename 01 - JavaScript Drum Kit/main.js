@@ -33,6 +33,7 @@ window.addEventListener('load', () => {
   keys.forEach(key => key.addEventListener('mousedown', () => playSound(key.dataset.key)));
   keys.forEach(key => key.addEventListener('touchstart', e => {
     e.preventDefault();
+    e.stopPropagation();
     playSound(key.dataset.key);
   }));
   keys.forEach(key => key.addEventListener('transitionend', removeTransition));
