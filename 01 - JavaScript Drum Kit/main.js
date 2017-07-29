@@ -12,11 +12,11 @@ window.addEventListener('load', () => {
    */
 
   function playSound(keyCode) {
-    const audio = document.querySelector(`audio[data-key="${keyCode}"]`);
+    const sound = document.querySelector(`audio[data-key="${keyCode}"]`);
     const key = document.querySelector(`.key[data-key="${keyCode}"]`);
-    if (!audio || !key) return;
-    audio.currentTime = 0;
-    audio.play();
+    if (!sound || !key) return;
+    sound.currentTime = 0;
+    sound.play();
     key.classList.add('playing');
   }
 
@@ -34,7 +34,7 @@ window.addEventListener('load', () => {
   keys.forEach(key => key.addEventListener('touchstart', e => {
     e.preventDefault();
     playSound(key.dataset.key);
-  }), false);
+  }));
   keys.forEach(key => key.addEventListener('transitionend', removeTransition));
   sounds.forEach(sound => sound.addEventListener('ended', () => {
     let key = document.querySelector(`.key[data-key="${sound.dataset.key}"]`);
