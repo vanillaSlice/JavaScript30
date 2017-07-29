@@ -16,7 +16,6 @@ window.addEventListener('load', () => {
   function playSound(keyCode) {
     const sound = document.querySelector(`audio[data-key="${keyCode}"]`);
     const key = document.querySelector(`.key[data-key="${keyCode}"]`);
-        alert(sound + ' ' + key);
     if (!sound || !key) return;
     sound.currentTime = 0;
     sound.play();
