@@ -7,8 +7,6 @@ window.addEventListener('load', () => {
   const sounds = document.querySelectorAll('audio');
   const keys = document.querySelectorAll('.key');
 
-  sounds.forEach(sound => sound.load());
-
   /*
    * Functions
    */
