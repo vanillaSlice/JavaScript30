@@ -7,6 +7,8 @@ window.addEventListener('load', () => {
   const sounds = document.querySelectorAll('audio');
   const keys = document.querySelectorAll('.key');
 
+  sounds.forEach(sound => sound.load());
+
   /*
    * Functions
    */
@@ -33,7 +35,6 @@ window.addEventListener('load', () => {
   keys.forEach(key => key.addEventListener('mousedown', () => playSound(key.dataset.key)));
   keys.forEach(key => key.addEventListener('touchstart', e => {
     e.preventDefault();
-    e.stopPropagation();
     playSound(key.dataset.key);
   }));
   keys.forEach(key => key.addEventListener('transitionend', removeTransition));
