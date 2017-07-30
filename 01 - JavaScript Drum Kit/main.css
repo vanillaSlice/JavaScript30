@@ -54,10 +54,9 @@ h1 {
   -ms-flex: 1 25%;
   flex: 1 25%;
   text-align: center;
-  color: #ffffff;
+  color: #fff;
   background: #003340;
-  text-shadow: 0 0 0.8rem #000000;
-  cursor: pointer;
+  text-shadow: 0 0 0.8rem #000;
 }
 
 .playing {

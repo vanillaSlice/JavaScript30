@@ -1,4 +1,9 @@
-(() => {
+window.addEventListener('load', () => {
+
+  /*
+   * Elements
+   */
+
   const player = document.querySelector('.player');
   const video = player.querySelector('.viewer');
   const progress = player.querySelector('.progress');
@@ -8,6 +13,10 @@
   const ranges = player.querySelectorAll('.player__slider');
 
   let mouseDown = false;
+
+  /*
+   * Functions
+   */
 
   function togglePlay() {
     if (video.paused) {
@@ -40,6 +49,10 @@
     video.currentTime = scrubTime;
   }
 
+  /*
+   * Event listeners
+   */
+
   video.addEventListener('click', togglePlay);
   video.addEventListener('play', updateButton);
   video.addEventListener('pause', updateButton);
@@ -52,4 +65,5 @@
   progress.addEventListener('mousemove', e => mouseDown && scrub(e));
   progress.addEventListener('mousedown', () => mouseDown = true);
   progress.addEventListener('mouseup', () => mouseDown = false);
-})();
+
+});
