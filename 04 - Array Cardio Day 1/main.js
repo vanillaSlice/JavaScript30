@@ -1,10 +1,4 @@
-(() => {
-  const Console = console;
-
-  // Get your shorts on - this is an array workout!
-  // ## Array Cardio Day 1
-
-  // Some data we can work with
+window.addEventListener('load', () => {
 
   const inventors = [{
       first: 'Albert',
@@ -93,26 +87,26 @@
   // Array.prototype.filter()
   // 1. Filter the list of inventors for those who were born in the 1500's
   const fifteen = inventors.filter(inventor => inventor.year >= 1500 && inventor.year < 1600);
-  Console.table(fifteen);
+  console.table(fifteen);
 
   // Array.prototype.map()
   // 2. Give us an array of the inventors' first and last names
   const fullNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
-  Console.log(fullNames);
+  console.log(fullNames);
 
   // Array.prototype.sort()
   // 3. Sort the inventors by birthdate, oldest to youngest
   const ordered = inventors.sort((a, b) => a.year - b.year);
-  Console.table(ordered);
+  console.table(ordered);
 
   // Array.prototype.reduce()
   // 4. How many years did all the inventors live?
   const totalYears = inventors.reduce((total, inventor) => total + inventor.passed - inventor.year, 0);
-  Console.log(totalYears);
+  console.log(totalYears);
 
   // 5. Sort the inventors by years lived
   const oldest = inventors.sort((a, b) => (b.passed - b.year) - (a.passed - a.year));
-  Console.table(oldest);
+  console.table(oldest);
 
   // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
   // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
@@ -121,16 +115,16 @@
   // const de = links
   //   .map(link => link.textContent)
   //   .filter(streetName => streetName.includes('de'));
-  // Console.log(de);
+  // console.log(de);
 
   // 7. sort Exercise
   // Sort the people alphabetically by last name
   const alphabetical = people.sort((a, b) => {
-    const [aLast, aFirst] = a.split(', ');
-    const [bLast, bFirst] = b.split(', ');
+    const aLast = a.split(', ')[0];
+    const bLast = b.split(', ')[0];
     return aLast > bLast ? 1 : -1;
   });
-  Console.log(alphabetical);
+  console.log(alphabetical);
 
   // 8. Reduce Exercise
   // Sum up the instances of each of these
@@ -145,5 +139,6 @@
     }
     return total;
   }, {});
-  Console.log(transportation);
-})();
+  console.log(transportation);
+
+});

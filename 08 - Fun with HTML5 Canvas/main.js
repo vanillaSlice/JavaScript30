@@ -1,4 +1,9 @@
-(() => {
+window.addEventListener('load', () => {
+
+  /*
+   * Elements
+   */
+
   const canvas = document.querySelector('#draw');
   const ctx = canvas.getContext('2d');
 
@@ -7,6 +12,10 @@
   let lastY = 0;
   let hue = 0;
   let direction = true;
+
+  /*
+   * Functions
+   */
 
   function resize() {
     let oldImageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
@@ -46,14 +55,25 @@
     }
   }
 
-  canvas.addEventListener('mousemove', draw);
-  canvas.addEventListener('mousedown', e => {
+  function handleMouseDown(event) {
     isDrawing = true;
-    [lastX, lastY] = [e.offsetX, e.offsetY];
-  });
+    [lastX, lastY] = [event.offsetX, event.offsetY];
+  }
+
+  /*
+   * Event listeners
+   */
+
+  window.addEventListener('resize', resize);
+  canvas.addEventListener('mousemove', draw);
+  canvas.addEventListener('mousedown', handleMouseDown);
   canvas.addEventListener('mouseup', () => isDrawing = false);
   canvas.addEventListener('mouseout', () => isDrawing = false);
-  window.addEventListener('resize', resize);
+
+  /*
+   * Init
+   */
 
   resize();
-})();
+
+});

@@ -3,8 +3,21 @@ html {
 }
 
 body {
-  font-family: sans-serif;
-  background: #ffc600;
+  font-family: 'Helvetica Neue', sans-serif;
+  background: #49dcb1;
+  font-size: 2rem;
+  font-weight: 200;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 100%;
+  min-height: 100vh;
 }
 
 .inbox {
@@ -12,7 +25,6 @@ body {
   margin: 5rem auto;
   background: #fff;
   border-radius: 0.5rem;
-  box-shadow: 1rem 1rem 0 rgba(0, 0, 0, 0.1);
 }
 
 .item {
@@ -29,8 +41,11 @@ body {
   border-bottom: 0;
 }
 
+input:checked {
+  background-color: #f9f9f9;
+}
+
 input:checked+p {
-  background: #f9f9f9;
   text-decoration: line-through;
 }
 
@@ -46,8 +61,11 @@ p {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  font-family: 'helvetica neue';
-  font-size: 2rem;
-  font-weight: 200;
   border-left: 0.1rem solid #d1e2ff;
+}
+
+@media (max-width: 25em) {
+  .inbox {
+    width: 90%;
+  }
 }

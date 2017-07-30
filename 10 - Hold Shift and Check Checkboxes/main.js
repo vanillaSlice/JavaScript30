@@ -1,12 +1,19 @@
-(() => {
+window.addEventListener('load', () => {
+
+  /*
+   * Elements
+   */
+
   const checkboxes = document.querySelectorAll('input[type="checkbox"]');
   let lastChecked;
 
-  checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
+  /*
+   * Functions
+   */
 
-  function handleCheck(e) {
+  function handleCheck(event) {
     let inBetween = false;
-    if (e.shiftKey && this.checked) {
+    if (event.shiftKey && this.checked) {
       checkboxes.forEach(checkbox => {
         if (checkbox === this || checkbox === lastChecked) {
           inBetween = !inBetween;
@@ -18,4 +25,11 @@
     }
     lastChecked = this;
   }
-})();
+
+  /*
+   * Event listeners
+   */
+
+  checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
+
+});

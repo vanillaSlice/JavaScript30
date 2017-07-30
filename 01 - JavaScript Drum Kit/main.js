@@ -11,34 +11,31 @@ window.addEventListener('load', () => {
    * Functions
    */
 
-  function playSound(keyCode) {
-    const sound = document.querySelector(`audio[data-key="${keyCode}"]`);
-    const key = document.querySelector(`.key[data-key="${keyCode}"]`);
+  function playSound(event) {
+    const sound = document.querySelector(`audio[data-key="${event.keyCode}"]`);
+    const key = document.querySelector(`.key[data-key="${event.keyCode}"]`);
     if (!sound || !key) return;
     sound.currentTime = 0;
     sound.play();
     key.classList.add('playing');
   }
 
-  function removeTransition(e) {
-    if (e.propertyName !== 'box-shadow') return;
+  function removeTransition(event) {
+    if (event.propertyName !== 'box-shadow') return;
     this.classList.remove('playing');
+  }
+
+  function handleSoundEnd() {
+    let key = document.querySelector(`.key[data-key="${this.dataset.key}"]`);
+    key.classList.remove('playing');
   }
 
   /*
    * Event listeners
    */
 
-  window.addEventListener('keydown', e => playSound(e.keyCode));
-  keys.forEach(key => key.addEventListener('mousedown', () => playSound(key.dataset.key)));
-  keys.forEach(key => key.addEventListener('touchstart', e => {
-    e.preventDefault();
-    playSound(key.dataset.key);
-  }));
+  window.addEventListener('keydown', playSound);
   keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-  sounds.forEach(sound => sound.addEventListener('ended', () => {
-    let key = document.querySelector(`.key[data-key="${sound.dataset.key}"]`);
-    key.classList.remove('playing');
-  }));
+  sounds.forEach(sound => sound.addEventListener('ended', handleSoundEnd));
 
 });

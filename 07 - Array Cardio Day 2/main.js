@@ -1,7 +1,4 @@
-(() => {
-  // ## Array Cardio Day 2
-
-  const Console = console;
+window.addEventListener('load', () => {
 
   const people = [{
       name: 'Wes',
@@ -49,25 +46,26 @@
     const currentYear = new Date().getFullYear();
     return (currentYear - person.year) >= 19;
   });
-  Console.log(isAdult);
+  console.log(isAdult);
 
   // Array.prototype.every() // is everyone 19 or older?
   const allAdults = people.every(person => {
     const currentYear = new Date().getFullYear();
     return (currentYear - person.year) >= 19;
   });
-  Console.log(allAdults);
+  console.log(allAdults);
 
   // Array.prototype.find()
   // Find is like filter, but instead returns just the one you are looking for
   // find the comment with the ID of 823423
   const comment = comments.find(comment => comment.id === 823423);
-  Console.log(comment);
+  console.log(comment);
 
   // Array.prototype.findIndex()
   // Find the comment with this ID
   // delete the comment with the ID of 823423
   const index = comments.findIndex(comment => comment.id === 823423);
   comments.splice(index, 1);
-  Console.table(comments);
-})();
+  console.table(comments);
+
+});

@@ -11,6 +11,7 @@ body {
 }
 
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -25,11 +26,11 @@ input.search {
   margin: 0 auto;
   text-align: center;
   outline: 0;
-  background-color: #252526;
-  border: 1rem solid #333;
-  color: inherit;
-  border-radius: 0.5rem;
+  background-color: #fff;
+  color: #333;
+  border: none;
   font-size: 4rem;
+  -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.12), inset 0 0 0.2rem rgba(0, 0, 0, 0.19);
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.12), inset 0 0 0.2rem rgba(0, 0, 0, 0.19);
 }
 
@@ -43,6 +44,7 @@ input.search {
   background: #252526;
   list-style: none;
   border-bottom: 0.1rem solid #333;
+  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.14);
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.14);
   margin: 0;
   padding: 2rem;
@@ -55,20 +57,6 @@ input.search {
   -ms-flex-pack: justify;
   justify-content: space-between;
   text-transform: capitalize;
-}
-
-.suggestions li:nth-child(even) {
-  -webkit-transform: perspective(10rem) rotateX(3deg) translateY(0.2rem) scale(1.001);
-  transform: perspective(10rem) rotateX(3deg) translateY(0.2rem) scale(1.001);
-  background: -webkit-linear-gradient(top, #252526 0%, #333 100%);
-  background: linear-gradient(to bottom, #252526 0%, #333 100%);
-}
-
-.suggestions li:nth-child(odd) {
-  -webkit-transform: perspective(10rem) rotateX(-3deg) translateY(0.3rem);
-  transform: perspective(10rem) rotateX(-3deg) translateY(0.3rem);
-  background: -webkit-linear-gradient(bottom, #252526 0%, #333 100%);
-  background: linear-gradient(to top, #252526 0%, #333 100%);
 }
 
 span.population {

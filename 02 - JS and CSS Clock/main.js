@@ -1,7 +1,16 @@
-(() => {
+window.addEventListener('load', () => {
+
+  /*
+   * Elements
+   */
+
   const secondHand = document.querySelector('.second-hand');
   const minuteHand = document.querySelector('.min-hand');
   const hourHand = document.querySelector('.hour-hand');
+
+  /*
+   * Functions
+   */
 
   function setDate() {
     const now = new Date();
@@ -19,7 +28,10 @@
     hourHand.style.transitionDuration = (hours === 0 || hours === 12) ? '0s' : '0.5s';
   }
 
+  /*
+   * Initialise
+   */
   setInterval(setDate, 1000);
-
   setDate();
-})();
+
+});
