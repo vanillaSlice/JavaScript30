@@ -1,0 +1,65 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  line-height: normal;
+  font-family: 'Open Sans', sans-serif;
+  background: #90708c;
+  font-size: 2rem;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Patua One', cursive;
+  margin-top: 0;
+  font-size: 7.2rem;
+}
+
+main {
+  max-width: 70rem;
+  margin: 5rem auto;
+  background: #fff;
+  padding: 4rem;
+  text-align: justify;
+}
+
+p {
+  margin: 1.5rem 0;
+}
+
+.align-left {
+  float: left;
+  margin-right: 2rem;
+}
+
+.align-right {
+  float: right;
+  margin-left: 2rem;
+}
+
+.slide-in {
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.align-left.slide-in {
+  -webkit-transform: translateX(-30%) scale(0.95);
+  transform: translateX(-30%) scale(0.95);
+}
+
+.align-right.slide-in {
+  -webkit-transform: translateX(30%) scale(0.95);
+  transform: translateX(30%) scale(0.95);
+}
+
+.slide-in.active {
+  opacity: 1;
+  -webkit-transform: translateX(0%) scale(1);
+  transform: translateX(0%) scale(1);
+}
