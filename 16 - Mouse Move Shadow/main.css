@@ -1,10 +1,11 @@
 html {
-  color: #000;
   font-family: sans-serif;
 }
 
 body {
   margin: 0;
+  background-color: #252526;
+  color: #eef0f2;
 }
 
 .hero {
@@ -18,7 +19,6 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: black;
 }
 
 h1 {
