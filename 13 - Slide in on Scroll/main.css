@@ -63,3 +63,12 @@ p {
   -webkit-transform: translateX(0%) scale(1);
   transform: translateX(0%) scale(1);
 }
+
+@media(max-width: 43.75em) {
+  main {
+    width: 100%;
+  }
+  img {
+    max-width: 100%;
+  }
+}

@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background: url('http://wes.io/hx9M/oh-la-la.jpg') center no-repeat;
+  background: url('./background.jpg') center no-repeat;
   background-size: cover;
   min-height: 100%;
   min-height: 100vh;
@@ -49,14 +49,14 @@ h2 {
   font-weight: 200;
 }
 
-.plates {
+.items {
   margin: 0;
   padding: 0;
   text-align: left;
   list-style: none;
 }
 
-.plates li {
+.items li {
   border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
   padding: 1rem 0;
   font-weight: 100;
@@ -65,24 +65,24 @@ h2 {
   display: flex;
 }
 
-.plates label {
+.items label {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
   cursor: pointer;
 }
 
-.plates input {
+.items input {
   display: none;
 }
 
-.plates input+label:before {
+.items input+label:before {
   content: '⬜️';
   margin-right: 1rem;
 }
 
-.plates input:checked+label:before {
-  content: '🌮';
+.items input:checked+label:before {
+  content: '✔️';
 }
 
 .edit-items {

@@ -7,6 +7,7 @@ window.addEventListener('load', () => {
   const canvas = document.querySelector('#draw');
   const ctx = canvas.getContext('2d');
 
+  let resized = false;
   let isDrawing = false;
   let lastX = 0;
   let lastY = 0;
@@ -25,6 +26,13 @@ window.addEventListener('load', () => {
     ctx.lineCap = 'round';
     ctx.lineWidth = 100;
     ctx.putImageData(oldImageData, 0, 0);
+    if (!resized) {
+      ctx.textAlign = 'center';
+      ctx.font = '3rem sans-serif';
+      ctx.fillStyle = '#fff';
+      ctx.fillText('Click to draw', canvas.width / 2, canvas.height / 2);
+      resized = true;
+    }
   }
 
   function draw(e) {

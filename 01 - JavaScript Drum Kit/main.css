@@ -78,3 +78,9 @@ kbd {
   letter-spacing: 0.1rem;
   color: #00a3cc;
 }
+
+@media (max-width: 50em) {
+  .keys {
+    width: 100%;
+  }
+}

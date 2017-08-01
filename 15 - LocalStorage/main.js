@@ -8,7 +8,7 @@ window.addEventListener('load', () => {
   const checkAll = document.querySelector('[name="check-all"]');
   const uncheckAll = document.querySelector('[name="uncheck-all"]');
   const addItems = document.querySelector('.add-items');
-  const itemsList = document.querySelector('.plates');
+  const itemsList = document.querySelector('.items');
   const items = JSON.parse(localStorage.getItem('items')) || [];
 
   /*
@@ -46,12 +46,12 @@ window.addEventListener('load', () => {
     this.reset();
   }
 
-  function populateList(plates = [], platesList) {
-    platesList.innerHTML = plates.map((plate, index) =>
+  function populateList(items = [], itemsList) {
+    itemsList.innerHTML = items.map((item, index) =>
       `
       <li>
-        <input type="checkbox" data-index="${index}" id="item${index}" ${plate.done ? 'checked' : ''}>
-        <label for="item${index}">${plate.text}</label>
+        <input type="checkbox" data-index="${index}" id="item${index}" ${item.done ? 'checked' : ''}>
+        <label for="item${index}">${item.text}</label>
       </li>
       `
     ).join('');
