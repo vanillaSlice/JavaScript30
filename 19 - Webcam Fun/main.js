@@ -1,11 +1,22 @@
 window.addEventListener('load', () => {
 
+  /*
+   * Elements 
+   */
+
   const video = document.querySelector('.player');
   const canvas = document.querySelector('.photo');
   const ctx = canvas.getContext('2d');
+  const filter = document.querySelector('#filter');
   const strip = document.querySelector('.strip');
   const snap = document.querySelector('.snap');
   const takePhotoButton = document.querySelector('.take-photo');
+
+  let selectedFilter = 'none';
+
+  /*
+   * Functions 
+   */
 
   function getVideo() {
     navigator.mediaDevices.getUserMedia({
@@ -29,10 +40,7 @@ window.addEventListener('load', () => {
     return setInterval(() => {
       ctx.drawImage(video, 0, 0, width, height);
       let pixels = ctx.getImageData(0, 0, width, height);
-      //pixels = redEffect(pixels);
-      pixels = rgbSplit(pixels);
-      //ctx.globalAlpha = 0.1;
-      //pixels = greenScreen(pixels);
+      applyFilter(pixels);
       ctx.putImageData(pixels, 0, 0);
     }, 16);
   }
@@ -42,6 +50,7 @@ window.addEventListener('load', () => {
     snap.currentTime = 0;
     snap.play();
 
+    // create photo and add download link
     const data = canvas.toDataURL('image/jpeg');
     const link = document.createElement('a');
     link.href = data;
@@ -50,13 +59,19 @@ window.addEventListener('load', () => {
     strip.insertBefore(link, strip.firstChild);
   }
 
-  function redEffect(pixels) {
-    for (let i = 0; i < pixels.data.length; i += 4) {
-      pixels.data[i] += 100;
-      pixels.data[i + 1] -= 50;
-      pixels.data[i + 2] *= 0.5;
+  function applyFilter(pixels) {
+    ctx.globalAlpha = 1;
+    switch (selectedFilter) {
+      case 'rgb-split':
+        rgbSplit(pixels);
+        break;
+      case 'red-effect':
+        redEffect(pixels);
+        break;
+      case 'loveless':
+        loveless(pixels);
+        break;
     }
-    return pixels;
   }
 
   function rgbSplit(pixels) {
@@ -65,38 +80,37 @@ window.addEventListener('load', () => {
       pixels.data[i + 100] = pixels.data[i + 1];
       pixels.data[i - 250] = pixels.data[i + 2];
     }
-    return pixels;
   }
 
-  function greenScreen(pixels) {
-    const levels = {};
-
-    document.querySelectorAll('.rgb input').forEach((input) => {
-      levels[input.name] = input.value;
-    });
-
-    for (let i = 0; i < pixels.data.length; i = i + 4) {
-      let red = pixels.data[i + 0];
-      let green = pixels.data[i + 1];
-      let blue = pixels.data[i + 2];
-
-      if (red >= levels.rmin &&
-        green >= levels.gmin &&
-        blue >= levels.bmin &&
-        red <= levels.rmax &&
-        green <= levels.gmax &&
-        blue <= levels.bmax) {
-        // take it out!
-        pixels.data[i + 3] = 0;
-      }
+  function redEffect(pixels) {
+    for (let i = 0; i < pixels.data.length; i += 4) {
+      pixels.data[i] += 100;
+      pixels.data[i + 1] -= 50;
+      pixels.data[i + 2] *= 0.5;
     }
-
-    return pixels;
   }
 
-  getVideo();
+  function loveless(pixels) {
+    ctx.globalAlpha = 0.02;
+    for (let i = 0; i < pixels.data.length; i += 4) {
+      pixels.data[i] += 10;
+      pixels.data[i + 1] += 2;
+      pixels.data[i + 2] += 5;
+    }
+  }
+
+  /*
+   * Event listeners
+   */
 
   video.addEventListener('canplay', paintToCanvas);
+  filter.addEventListener('change', e => selectedFilter = e.target.value);
   takePhotoButton.addEventListener('click', takePhoto);
+
+  /*
+   * Init 
+   */
+
+  getVideo();
 
 });
