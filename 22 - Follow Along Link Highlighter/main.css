@@ -1,0 +1,76 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+  background: url('./background.jpg') center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 2;
+  padding: 5rem 2rem;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 70rem;
+  background-color: rgba(51, 51, 51, 0.5);
+  padding: 3rem;
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: #999;
+}
+
+.menu {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.menu a {
+  display: inline-block;
+  padding: 0.5rem;
+  margin: 0 2rem;
+}
+
+.highlight {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border: 0.2rem solid #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+}
+
+@media (max-width: 37.5em) {
+  .menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .menu a {
+    margin-left: 0;
+  }
+}
