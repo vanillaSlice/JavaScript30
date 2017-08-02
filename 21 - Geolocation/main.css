@@ -3,7 +3,8 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  background: url('./background.jpg') center no-repeat;
+  background-size: cover;
   min-height: 100%;
   min-height: 100vh;
   display: -webkit-box;
@@ -19,8 +20,8 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  background: url('./background.jpg') center no-repeat;
-  background-size: cover;
+  text-align: center;
+  font-family: sans-serif;
   color: #fff;
   font-size: 5rem;
 }
