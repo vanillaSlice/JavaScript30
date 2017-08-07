@@ -11,29 +11,45 @@ body {
   background-color: #f7df1e;
   font-family: 'Neutra Text Bold Alt', sans-serif;
   font-size: 2rem;
+  line-height: 1.3;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 main {
   margin: 0 auto;
   width: 50rem;
-  padding: 3rem 2rem;
+  padding: 5rem 2rem;
 }
 
 h1 {
   font-size: 7rem;
+  letter-spacing: 0.5rem;
+  text-shadow: 0.3rem 0.3rem 0 rgba(0, 255, 255, 0.6), 0.6rem 0.6rem 0 rgba(255, 0, 255, 0.6);
 }
 
-ol {
+ul {
   margin-top: 2rem;
-  list-style-position: inside;
-  list-style-type: decimal-leading-zero;
+  letter-spacing: 0.15rem;
 }
 
-li {
-  margin: 0.5rem 0;
+a {
+  text-decoration: none;
+  color: #000;
+  -webkit-transition: font 0.2s linear;
+  transition: font 0.2s linear;
 }
 
-@media (max-width: 31.250em) {
+li>a:hover,
+li>a:focus,
+li>a:active {
+  text-shadow: 0.2rem 0.2rem 0 rgba(0, 255, 255, 0.6), 0.4rem 0.4rem 0 rgba(255, 0, 255, 0.6);
+  font-size: 3rem;
+}
+
+@media (max-width: 31.25em) {
   main {
     width: 90%;
   }
