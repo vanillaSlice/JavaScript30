@@ -1,10 +1,6 @@
-html {
-  font-size: 62.5%;
-}
-
+@import url('../base.css');
 body {
-  background-color: #1d1d1b;
-  font-family: 'Comfortaa', cursive;
+  background-color: rgb(255, 102, 255);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,14 +12,8 @@ body {
   justify-content: center;
   min-height: 100%;
   min-height: 100vh;
-  line-height: 1.3;
-  color: #fff;
-  font-size: 2rem;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  color: white;
+  font-size: 2.4rem;
 }
 
 main {
@@ -32,11 +22,11 @@ main {
 
 .modal {
   position: fixed;
+  background-color: rgb(255, 102, 255);
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,8 +43,10 @@ main {
 .modal-content {
   width: 50rem;
   text-align: center;
-  background-color: #1d1d1b;
-  border: 0.2rem solid #ffdd00;
+  text-shadow: 0.2rem 0.2rem rgb(34, 35, 36);
+  border: 0.3rem solid rgb(102, 255, 255);
+  -webkit-box-shadow: 0 0 0 0.3rem rgb(255, 102, 255), 0 0 0 0.6rem white;
+  box-shadow: 0 0 0 0.3rem rgb(255, 102, 255), 0 0 0 0.6rem white;
   border-radius: 0.8rem;
   padding: 1.5rem 1rem;
 }
@@ -64,26 +56,33 @@ main {
   font-family: inherit;
   font-size: inherit;
   background: none;
-  border: none;
   cursor: pointer;
   margin-top: 1rem;
-  border: 0.2rem solid #ffdd00;
+  text-shadow: 0.2rem 0.2rem rgb(34, 35, 36);
+  border: none;
   border-radius: 0.8rem;
   padding: 0.5rem 1rem;
   text-align: center;
+  -webkit-transition: transform 0.1s linear;
+  -webkit-transition: -webkit-transform 0.1s linear;
+  transition: -webkit-transform 0.1s linear;
+  transition: transform 0.1s linear;
+  transition: transform 0.1s linear, -webkit-transform 0.1s linear;
 }
 
 .modal-content button.ok:hover,
 .modal-content button.ok:focus,
 .modal-content button.ok:active {
-  background-color: #ffdd00;
-  color: #1d1d1b;
+  color: rgb(102, 255, 255);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 h1 {
   font-size: 5.7rem;
   text-align: center;
-  color: #ffdd00;
+  color: rgb(102, 255, 255);
+  text-shadow: 0.3rem 0.3rem 0 rgb(34, 35, 36), 0.6rem 0.6rem 0 white;
 }
 
 .keys {
@@ -100,7 +99,10 @@ h1 {
 }
 
 .key {
-  border: 0.3rem solid #ffdd00;
+  text-shadow: 0.2rem 0.2rem rgb(34, 35, 36);
+  border: 0.3rem solid rgb(102, 255, 255);
+  -webkit-box-shadow: 0 0 0 0.3rem rgb(34, 35, 36), 0 0 0 0.6rem white;
+  box-shadow: 0 0 0 0.3rem rgb(255, 102, 255), 0 0 0 0.6rem white;
   border-radius: 0.8rem;
   margin: 1.6rem;
   font-size: 2.6rem;
@@ -111,7 +113,6 @@ h1 {
   -ms-flex: 1 25%;
   flex: 1 25%;
   text-align: center;
-  color: #fff;
   background: transparent;
   line-height: 1;
   cursor: pointer;
@@ -120,9 +121,7 @@ h1 {
 .playing {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
-  border-color: #ffff99;
-  -webkit-box-shadow: 0 0 1.6rem #ffff99;
-  box-shadow: 0 0 1.6rem #ffff99;
+  background-color: rgb(102, 255, 255);
 }
 
 kbd {
@@ -133,7 +132,7 @@ kbd {
 .sound {
   font-size: 1.4rem;
   text-transform: uppercase;
-  color: #fff;
+  color: inherit;
 }
 
 @media (max-width: 50em) {

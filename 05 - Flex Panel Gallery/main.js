@@ -16,7 +16,7 @@ window.addEventListener('load', () => {
 
   function toggleActive(event) {
     if (event.propertyName === 'flex-grow' || event.propertyName === 'flex') {
-      this.classList.toggle('open-active');
+      this.classList.toggle('open-active', this.classList.contains('open'));
     }
   }
 

@@ -58,7 +58,7 @@ window.addEventListener('load', () => {
   }
 
   function handleTransitionEnd(e) {
-    if (e.propertyName !== 'box-shadow') return;
+    if (e.propertyName !== 'background-color') return;
     this.classList.remove('playing');
   }
 
