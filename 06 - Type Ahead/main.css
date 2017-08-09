@@ -1,37 +1,30 @@
-html {
-  font-size: 62.5%;
-}
-
+@import url('../base.css');
 body {
-  font-family: 'Helvetica Neue', sans-serif;
-  background-color: #1e1e1e;
-  color: #fff;
+  background-color: white;
+  color: rgb(34, 35, 36);
   text-align: center;
   font-size: 2rem;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
 .search-form {
   width: 50rem;
   margin: 5rem auto;
+  -webkit-box-shadow: 0.5rem 0.5rem rgb(120, 255, 255), 1rem 1rem rgb(255, 120, 255);
+  box-shadow: 0.5rem 0.5rem rgb(120, 255, 255), 1rem 1rem rgb(255, 120, 255);
+  border: 0.3rem solid rgb(150, 150, 150);
 }
 
 input.search {
+  font-family: inherit;
   width: 100%;
   padding: 2rem;
   margin: 0 auto;
   text-align: center;
   outline: 0;
-  background-color: #fff;
-  color: #333;
+  background-color: rgb(230, 230, 230);
+  color: rgb(34, 35, 36);
   border: none;
   font-size: 4rem;
-  -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.12), inset 0 0 0.2rem rgba(0, 0, 0, 0.19);
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.12), inset 0 0 0.2rem rgba(0, 0, 0, 0.19);
 }
 
 .suggestions {
@@ -41,15 +34,11 @@ input.search {
 }
 
 .suggestions li {
-  background: #252526;
+  background-color: white;
   list-style: none;
-  border-bottom: 0.1rem solid #333;
-  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.14);
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.14);
+  border-bottom: 0.1rem solid rgb(230, 230, 230);
   margin: 0;
   padding: 2rem;
-  -webkit-transition: background 0.2s;
-  transition: background 0.2s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,13 +53,12 @@ span.population {
 }
 
 .hl {
-  background: #0070cc;
+  text-shadow: 0.2rem 0.2rem 0 rgb(120, 255, 255), 0.4rem 0.4rem 0 rgb(255, 120, 255);
 }
 
-@media (max-width: 31.25em) {
+@media (max-width: 32.5em) {
   .search-form {
-    margin: 0;
-    width: 100%;
+    width: 90%;
   }
   input.search {
     border: none;

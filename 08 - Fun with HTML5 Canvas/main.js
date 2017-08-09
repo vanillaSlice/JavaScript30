@@ -4,15 +4,19 @@ window.addEventListener('load', () => {
    * Elements
    */
 
+  const p = document.querySelector('p');
   const canvas = document.querySelector('#draw');
   const ctx = canvas.getContext('2d');
 
-  let resized = false;
+  /*
+   * Properties 
+   */
+
   let isDrawing = false;
   let lastX = 0;
   let lastY = 0;
   let hue = 0;
-  let direction = true;
+  let growing = false;
 
   /*
    * Functions
@@ -26,25 +30,42 @@ window.addEventListener('load', () => {
     ctx.lineCap = 'round';
     ctx.lineWidth = 100;
     ctx.putImageData(oldImageData, 0, 0);
-    if (!resized) {
-      ctx.textAlign = 'center';
-      ctx.font = '3rem sans-serif';
-      ctx.fillStyle = '#fff';
-      ctx.fillText('Click to draw', canvas.width / 2, canvas.height / 2);
-      resized = true;
+  }
+
+  function handlePress(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    isDrawing = true;
+    if (e.type === 'touchstart') {
+      const target = e.targetTouches[0];
+      [lastX, lastY] = [target.clientX, target.clientY];
+    } else {
+      [lastX, lastY] = [e.offsetX, e.offsetY];
     }
   }
 
   function draw(e) {
-    if (!isDrawing) return; // stop function from running when they are not moused down
+    if (!isDrawing) return; // stop if not drawing
+
+    p.remove(); // make sure p is no longer displaying
+
+    // get x and y
+    let x;
+    let y;
+    if (e.type === 'touchmove') {
+      const target = e.targetTouches[0];
+      [x, y] = [target.clientX, target.clientY];
+    } else {
+      [x, y] = [e.offsetX, e.offsetY];
+    }
 
     // draw the line
     ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
     ctx.beginPath();
     ctx.moveTo(lastX, lastY);
-    ctx.lineTo(e.offsetX, e.offsetY);
+    ctx.lineTo(x, y);
     ctx.stroke();
-    [lastX, lastY] = [e.offsetX, e.offsetY];
+    [lastX, lastY] = [x, y];
 
     // update colour
     hue++;
@@ -53,19 +74,16 @@ window.addEventListener('load', () => {
     }
 
     // update line width
-    if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
-      direction = !direction;
-    }
-    if (direction) {
+    growing = (growing && ctx.lineWidth < 100) || (!growing && ctx.lineWidth <= 1);
+    if (growing) {
       ctx.lineWidth++;
     } else {
       ctx.lineWidth--;
     }
   }
 
-  function handleMouseDown(event) {
-    isDrawing = true;
-    [lastX, lastY] = [event.offsetX, event.offsetY];
+  function stopDrawing() {
+    isDrawing = false;
   }
 
   /*
@@ -73,10 +91,14 @@ window.addEventListener('load', () => {
    */
 
   window.addEventListener('resize', resize);
+  canvas.addEventListener('mousedown', handlePress);
+  canvas.addEventListener('touchstart', handlePress);
   canvas.addEventListener('mousemove', draw);
-  canvas.addEventListener('mousedown', handleMouseDown);
-  canvas.addEventListener('mouseup', () => isDrawing = false);
-  canvas.addEventListener('mouseout', () => isDrawing = false);
+  canvas.addEventListener('touchmove', draw);
+  canvas.addEventListener('mouseup', stopDrawing);
+  canvas.addEventListener('mouseout', stopDrawing);
+  canvas.addEventListener('touchend', stopDrawing);
+  canvas.addEventListener('touchcancel', stopDrawing);
 
   /*
    * Init

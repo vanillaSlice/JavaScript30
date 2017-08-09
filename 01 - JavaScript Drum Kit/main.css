@@ -73,7 +73,6 @@ main {
 .modal-content button.ok:hover,
 .modal-content button.ok:focus,
 .modal-content button.ok:active {
-  color: rgb(102, 255, 255);
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }

@@ -18,8 +18,8 @@ window.addEventListener('load', () => {
     const matches = findMatches(this.value, cities);
     const html = matches.map(place => {
       const regex = new RegExp(this.value, 'gi');
-      const cityName = place.city.replace(regex, `<span class="hl">${this.value}</span>`);
-      const stateName = place.state.replace(regex, `<span class="hl">${this.value}</span>`);
+      const cityName = place.city.replace(regex, match => `<span class="hl">${match}</span>`);
+      const stateName = place.state.replace(regex, match => `<span class="hl">${match}</span>`);
       return `<li>
         <span class="name">${cityName}, ${stateName}</span>
         <span class="population">${numberWithCommas(place.population)}</span>

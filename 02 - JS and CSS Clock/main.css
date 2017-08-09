@@ -21,8 +21,8 @@ body {
   border-radius: 50%;
   margin: 2rem 0;
   position: relative;
-  -webkit-box-shadow: 0.5rem 0.5rem 0 rgb(0, 255, 255), 1rem 1rem 0 rgb(255, 0, 255);
-  box-shadow: 0.5rem 0.5rem 0 rgb(0, 255, 255), 1rem 1rem 0 rgb(255, 0, 255);
+  -webkit-box-shadow: 0 0 0 0.5rem rgb(0, 255, 255), 0 0 0 1rem rgb(255, 0, 255);
+  box-shadow: 0 0 0 0.5rem rgb(0, 255, 255), 0 0 0 1rem rgb(255, 0, 255);
 }
 
 .center {

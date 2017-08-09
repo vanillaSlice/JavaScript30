@@ -5,6 +5,11 @@ window.addEventListener('load', () => {
    */
 
   const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+  /*
+   * Properties 
+   */
+
   let lastChecked;
 
   /*
