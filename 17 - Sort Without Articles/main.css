@@ -1,12 +1,7 @@
-html {
-  font-size: 62.5%;
-}
-
+@import url('../base.css');
 body {
-  font-family: 'Helvetica Neue', sans-serif;
-  background: #49dcb1;
+  background: rgb(0, 255, 255);
   font-size: 2rem;
-  font-weight: 200;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,18 +13,15 @@ body {
   align-items: center;
   min-height: 100%;
   min-height: 100vh;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  color: rgb(34, 35, 36);
 }
 
 main {
-  margin: 5rem auto;
-  background: #fff;
   width: 50rem;
-  border-radius: 0.5rem;
+  margin: 5rem auto;
+  background: white;
+  -webkit-box-shadow: 1rem 1rem rgb(0, 120, 255);
+  box-shadow: 1rem 1rem rgb(0, 120, 255);
 }
 
 #bands {

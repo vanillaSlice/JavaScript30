@@ -12,6 +12,10 @@ window.addEventListener('load', () => {
   const skipButtons = player.querySelectorAll('[data-skip]');
   const ranges = player.querySelectorAll('.player__slider');
 
+  /*
+   * Properties 
+   */
+
   let mouseDown = false;
 
   /*

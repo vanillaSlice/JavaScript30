@@ -1,36 +1,27 @@
-html {
-  font-size: 62.5%;
-}
-
+@import url('../base.css');
 body {
-  margin: 0;
-  padding: 0;
+  background-color: rgb(34, 35, 36);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #2f2d2e;
-  min-height: 100vh;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  text-align: center;
+  min-height: 100%;
+  min-height: 100vh;
 }
 
 .player {
   max-width: 75rem;
-  border: 0.5rem solid rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
   position: relative;
   font-size: 0;
   overflow: hidden;
+  -webkit-box-shadow: 0.5rem 0.5rem 0 rgba(0, 255, 255, 0.6), 1rem 1rem 0 rgba(255, 0, 255, 0.6);
+  box-shadow: 0.5rem 0.5rem 0 rgba(0, 255, 255, 0.6), 1rem 1rem 0 rgba(255, 0, 255, 0.6);
 }
 
 .player__video {
@@ -41,7 +32,7 @@ body {
   background: none;
   border: 0;
   line-height: 1;
-  color: #eef0f2;
+  color: white;
   text-align: center;
   outline: 0;
   padding: 0;
@@ -50,7 +41,7 @@ body {
 }
 
 .player__button:focus {
-  border-color: #a3c4bc;
+  border-color: white;
 }
 
 .player__slider {
@@ -108,7 +99,7 @@ body {
 
 .progress__filled {
   width: 50%;
-  background: #a3c4bc;
+  background: white;
   -webkit-box-flex: 0;
   -ms-flex: 0;
   flex: 0;
@@ -133,7 +124,7 @@ input[type=range]::-webkit-slider-runnable-track {
   cursor: pointer;
   -webkit-box-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0), 0 0 0.1rem rgba(13, 13, 13, 0);
   box-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0), 0 0 0.1rem rgba(13, 13, 13, 0);
-  background: #c6c7c4;
+  background: white;
   border-radius: 0.13rem;
   border: 0.02rem solid rgba(1, 1, 1, 0);
 }
@@ -142,7 +133,7 @@ input[type=range]::-webkit-slider-thumb {
   height: 1.5rem;
   width: 1.5rem;
   border-radius: 5rem;
-  background: #a3c4bc;
+  background: white;
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -0.35rem;
@@ -151,7 +142,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #c6c7c4;
+  background: white;
 }
 
 input[type=range]::-moz-range-track {
@@ -159,7 +150,7 @@ input[type=range]::-moz-range-track {
   height: 0.84rem;
   cursor: pointer;
   box-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0), 0 0 0.1rem rgba(13, 13, 13, 0);
-  background: #c6c7c4;
+  background: white;
   border-radius: 0.13rem;
   border: 0.02rem solid rgba(1, 1, 1, 0);
 }
@@ -169,6 +160,12 @@ input[type=range]::-moz-range-thumb {
   height: 1.5rem;
   width: 1.5rem;
   border-radius: 5rem;
-  background: #a3c4bc;
+  background: white;
   cursor: pointer;
+}
+
+@media (max-width: 48.75em) {
+  .player {
+    width: 90%;
+  }
 }

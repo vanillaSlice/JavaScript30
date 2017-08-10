@@ -101,14 +101,12 @@ var cornify_updatecount = function () {
     var p = document.createElement('p');
     p.id = 'cornifycount';
     p.style.position = 'fixed';
-    p.style.bottom = '5px';
+    p.style.bottom = '2rem';
     p.style.left = '0px';
     p.style.right = '0px';
     p.style.zIndex = '1000000000';
-    p.style.color = '#ff00ff';
     p.style.textAlign = 'center';
     p.style.fontSize = '24px';
-    p.style.fontFamily = "'Comic Sans MS', 'Comic Sans', 'Marker Felt', serif";
     var body = document.getElementsByTagName('body')[0];
     body.appendChild(p);
   }
@@ -160,31 +158,3 @@ var cornify_replace = function () {
     hc -= 1;
   }
 };
-
-/*
- * Adapted from http://www.snaptortoise.com/konami-js/
- */
-var cornami = {
-  input: "",
-  pattern: "38384040373937396665",
-  clear: setTimeout('cornami.clear_input()', 5000),
-  load: function () {
-    window.document.onkeydown = function (e) {
-      if (cornami.input == cornami.pattern) {
-        cornify_add();
-        clearTimeout(cornami.clear);
-        return;
-      } else {
-        cornami.input += e ? e.keyCode : event.keyCode;
-        if (cornami.input == cornami.pattern) cornify_add();
-        clearTimeout(cornami.clear);
-        cornami.clear = setTimeout("cornami.clear_input()", 5000);
-      }
-    };
-  },
-  clear_input: function () {
-    cornami.input = "";
-    clearTimeout(cornami.clear);
-  }
-};
-cornami.load();
