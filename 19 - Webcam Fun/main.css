@@ -1,32 +1,11 @@
-html {
-  font-size: 62.5%;
-}
-
+@import url('../base.css');
 body {
-  background: #252526;
-  font-size: 1.6rem;
-  color: #fff;
-  font-family: sans-serif;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.photobooth {
+  background-color: white;
+  color: rgb(34, 35, 36);
+  font-size: 2rem;
+  padding: 5rem;
   max-width: 150rem;
-  margin: 2rem;
-  border-radius: 0.2rem;
-}
-
-
-/*clearfix*/
-
-.photobooth:after {
-  content: '';
-  display: block;
-  clear: both;
+  margin: 0 auto;
 }
 
 .controls {
@@ -34,34 +13,29 @@ body {
 }
 
 .controls button {
-  color: inherit;
-  background-color: #0070cc;
-  border: none;
-  border-radius: 0.5rem;
   cursor: pointer;
 }
 
-.controls button:hover,
-.controls button:active {
-  background-color: #333;
+.photobooth:after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 .photo {
   width: 100%;
   float: left;
+  -webkit-box-shadow: 0.5rem 0.5rem rgb(120, 255, 255), 1rem 1rem rgb(255, 120, 255);
+  box-shadow: 0.5rem 0.5rem rgb(120, 255, 255), 1rem 1rem rgb(255, 120, 255);
 }
 
 .player {
   position: absolute;
-  top: 2rem;
-  right: 2rem;
+  top: 10rem;
+  right: 7rem;
   width: 20rem;
+  border: 0.3rem solid rgb(150, 150, 150);
 }
-
-
-/*
-  Strip!
-*/
 
 .strip {
   padding: 2rem;
@@ -73,7 +47,7 @@ body {
   padding: 0.8rem 0.8rem 2.5rem 0.8rem;
   -webkit-box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.2);
-  background: #fff;
+  background: white;
 }
 
 .strip a:nth-child(5n+1) img {
@@ -101,7 +75,7 @@ body {
   transform: rotate(12deg);
 }
 
-@media (max-width: 31.25em) {
+@media (max-width: 60em) {
   video {
     display: none;
   }

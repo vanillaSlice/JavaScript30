@@ -6,22 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Webcam Fun</title>
-  <link rel="stylesheet" type="text/css" href="../reset.css">
   <link rel="stylesheet" type="text/css" href="./main.css">
 </head>
 
 <body>
+  <div class="controls">
+    <label for="filter">Filter: </label>
+    <select name="filter" id="filter">
+          <option value="none">None</option>
+          <option value="rgb-split">RGB Split</option>
+          <option value="red-effect">Red Effect</option>
+          <option value="loveless">Loveless</option>
+        </select>
+    <button type="button" class="take-photo">Take Photo</button>
+  </div>
   <div class="photobooth">
-    <div class="controls">
-      <label for="filter">Filter: </label>
-      <select name="filter" id="filter">
-        <option value="none">None</option>
-        <option value="rgb-split">RGB Split</option>
-        <option value="red-effect">Red Effect</option>
-        <option value="loveless">Loveless</option>
-      </select>
-      <button type="button" class="take-photo">Take Photo</button>
-    </div>
     <canvas class="photo"></canvas>
     <video class="player"></video>
     <div class="strip"></div>

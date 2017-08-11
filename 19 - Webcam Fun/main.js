@@ -12,6 +12,10 @@ window.addEventListener('load', () => {
   const snap = document.querySelector('.snap');
   const takePhotoButton = document.querySelector('.take-photo');
 
+  /**
+   * Properties
+   */
+
   let selectedFilter = 'none';
 
   /*

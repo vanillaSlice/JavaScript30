@@ -1,16 +1,7 @@
-html {
-  font-size: 62.5%;
-}
-
+@import url('../base.css');
 body {
-  background: #49dcb1;
-  font-family: sans-serif;
+  background: rgb(0, 255, 255);
   font-size: 2rem;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
 p {
@@ -20,7 +11,7 @@ p {
 .words {
   max-width: 50rem;
   margin: 5rem auto;
-  background: #fff;
+  background: white;
   -webkit-box-shadow: 1rem 1rem 0 rgba(0, 0, 0, 0.1);
   box-shadow: 1rem 1rem 0 rgba(0, 0, 0, 0.1);
   padding: 1rem 2rem 1rem 5rem;
@@ -28,6 +19,8 @@ p {
   background-size: 100% 3rem;
   position: relative;
   line-height: 3rem;
+  -webkit-box-shadow: 1rem 1rem rgb(0, 120, 255);
+  box-shadow: 1rem 1rem rgb(0, 120, 255);
 }
 
 .words:before {
@@ -39,4 +32,10 @@ p {
   bottom: 0;
   border: 0.1rem solid;
   border-color: transparent #efe4e4;
+}
+
+@media (max-width: 35em) {
+  .words {
+    width: 90%;
+  }
 }
