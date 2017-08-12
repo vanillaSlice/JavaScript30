@@ -1,5 +1,9 @@
 window.addEventListener('load', () => {
 
+  /*
+   * Elements 
+   */
+
   const arrow = document.querySelector('.arrow');
   const speed = document.querySelector('.speed-value');
   const latitude = document.querySelector('.latitude-value');

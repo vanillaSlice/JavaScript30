@@ -8,6 +8,11 @@ window.addEventListener('load', () => {
   const highlight = document.createElement('span');
   highlight.classList.add('highlight');
   document.body.appendChild(highlight);
+
+  /*
+   * Properties 
+   */
+
   let currentLink;
 
   /*

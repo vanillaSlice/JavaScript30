@@ -9,6 +9,11 @@ window.addEventListener('load', () => {
   const uncheckAll = document.querySelector('[name="uncheck-all"]');
   const addItems = document.querySelector('.add-items');
   const itemsList = document.querySelector('.items');
+
+  /*
+   * Properties 
+   */
+
   const items = JSON.parse(localStorage.getItem('items')) || [];
 
   /*

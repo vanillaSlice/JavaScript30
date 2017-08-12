@@ -1,9 +1,22 @@
 window.addEventListener('load', () => {
 
+  /*
+   * Elements 
+   */
+
   const slider = document.querySelector('.items');
+
+  /*
+   * Properties 
+   */
+
   let isDown = false;
   let startX;
   let scrollLeft;
+
+  /*
+   * Functions and event listeners 
+   */
 
   slider.addEventListener('mousedown', e => {
     isDown = true;

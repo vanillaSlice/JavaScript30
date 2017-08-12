@@ -1,28 +1,18 @@
-html {
-  font-size: 62.5%;
-}
-
+@import url('../base.css');
 body {
-  font-family: sans-serif;
-  background: url('./background.jpg') center no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  color: #fff;
-  font-size: 2rem;
-  line-height: 2;
+  background-color: white;
   padding: 5rem 2rem;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  color: rgb(34, 35, 36);
+  font-size: 2rem;
 }
 
 .container {
   margin: 0 auto;
   max-width: 70rem;
-  background-color: rgba(51, 51, 51, 0.6);
   padding: 3rem;
+  -webkit-box-shadow: 0.5rem 0.5rem rgb(120, 255, 255), 1rem 1rem rgb(255, 120, 255);
+  box-shadow: 0.5rem 0.5rem rgb(120, 255, 255), 1rem 1rem rgb(255, 120, 255);
+  border: 0.3rem solid rgb(150, 150, 150);
 }
 
 .wrapper {
@@ -31,7 +21,12 @@ body {
 
 a {
   text-decoration: none;
-  color: #999;
+  color: rgb(255, 0, 255);
+  padding: 0.5rem;
+}
+
+p {
+  margin-top: 1.5rem;
 }
 
 .menu {
@@ -47,14 +42,14 @@ a {
 }
 
 .menu a {
+  font-size: 3rem;
   margin: 0 2rem;
 }
 
 .highlight {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  background-color: #0070cc;
-  border-radius: 1rem;
+  background-color: rgb(120, 255, 255);
   position: absolute;
   top: 0;
   left: 0;

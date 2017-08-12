@@ -1,26 +1,11 @@
+@import url('../base.css');
 html {
-  box-sizing: border-box;
-  font-size: 10px;
-  background: #ffc600;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  font-family: 'Amatic SC', cursive;
+  background-color: rgb(255, 102, 255);
 }
 
 h1 {
   text-align: center;
-  font-size: 10rem;
-  line-height: 1;
-  margin-bottom: 0;
+  font-size: 7rem;
 }
 
 .score {

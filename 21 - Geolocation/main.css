@@ -1,11 +1,7 @@
-html {
-  font-size: 62.5%;
-}
-
+@import url('../base.css');
 body {
-  background: url('./background.jpg') center no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  background-color: white;
+  color: rgb(34, 35, 36);
   min-height: 100%;
   min-height: 100vh;
   display: -webkit-box;
@@ -22,14 +18,7 @@ body {
   -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
-  font-family: sans-serif;
-  color: #fff;
   font-size: 5rem;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
 .arrow {
@@ -43,8 +32,15 @@ body {
   margin: 1.6rem;
 }
 
+svg {
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 0.4rem rgb(120, 255, 255), 0 0 0 0.8rem rgb(255, 120, 255);
+  box-shadow: 0 0 0 0.4rem rgb(120, 255, 255), 0 0 0 0.8rem rgb(255, 120, 255);
+}
+
 p {
   margin: 1rem;
+  text-shadow: 0.2rem 0.2rem rgb(120, 255, 255), 0.4rem 0.4rem rgb(255, 120, 255);
 }
 
 .units {
