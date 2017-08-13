@@ -4,14 +4,19 @@ window.addEventListener('load', () => {
    * Elements 
    */
 
-  let utterance;
-  let voices = [];
   const voicesDropdown = document.querySelector('[name="voice"]');
   const rate = document.querySelector('#rate');
   const pitch = document.querySelector('#pitch');
   const text = document.querySelector('[name="text"]');
   const speakButton = document.querySelector('#speak');
   const stopButton = document.querySelector('#stop');
+
+  /*
+   * Properties 
+   */
+
+  let utterance;
+  let voices = [];
 
   /*
    * Functions 

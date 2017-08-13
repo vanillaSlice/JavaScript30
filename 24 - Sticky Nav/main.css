@@ -1,44 +1,13 @@
-html {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  background: #eeeeee;
-  font-family: 'helvetica neue';
-  font-size: 20px;
-  font-weight: 200;
-}
-
+@import url('../base.css');
 body {
-  margin: 0;
-}
-
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
-}
-
-.site-wrap {
-  max-width: 700px;
-  margin: 70px auto;
-  background: white;
-  padding: 40px;
-  text-align: justify;
-  -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
-  -webkit-transform: scale(0.98);
-  transform: scale(0.98);
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
+  background-color: white;
+  color: rgb(34, 35, 36);
+  font-size: 2rem;
 }
 
 header {
   text-align: center;
   height: 50vh;
-  background: url(http://wes.io/iEgP/wow-so-deep.jpg) bottom center no-repeat;
-  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,16 +17,17 @@ header {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  background-color: rgb(255, 120, 255);
 }
 
 h1 {
   color: white;
   font-size: 7vw;
-  text-shadow: 3px 4px 0 rgba(0, 0, 0, 0.2)
+  text-shadow: 0.3rem 0.4rem 0 rgba(0, 0, 0, 0.3);
 }
 
 nav {
-  background: black;
+  background: rgb(34, 35, 36);
   top: 0;
   width: 100%;
   -webkit-transition: all 0.5s;
@@ -68,12 +38,10 @@ nav {
 
 .fixed-nav nav {
   position: fixed;
-  -webkit-box-shadow: 0 5px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .fixed-nav li.logo {
-  max-width: 500px;
+  max-width: 50rem;
 }
 
 .fixed-nav .site-wrap {
@@ -112,20 +80,46 @@ li.logo {
   background: white;
   -webkit-transition: all .5s;
   transition: all .5s;
-  font-weight: 600;
-  font-size: 30px;
+  font-size: 3rem;
 }
 
 li.logo a {
-  color: black;
+  color: rgb(34, 35, 36);
 }
 
 nav a {
   text-decoration: none;
-  padding: 20px;
+  padding: 2rem;
   display: inline-block;
   color: white;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   text-transform: uppercase;
+}
+
+.site-wrap {
+  max-width: 70rem;
+  margin: 7rem auto;
+  background: white;
+  padding: 4rem;
+  text-align: justify;
+  -webkit-transform: scale(0.98);
+  transform: scale(0.98);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-box-shadow: 0.5rem 0.5rem rgb(120, 255, 255), 1rem 1rem rgb(255, 120, 255);
+  box-shadow: 0.5rem 0.5rem rgb(120, 255, 255), 1rem 1rem rgb(255, 120, 255);
+  border: 0.3rem solid rgb(150, 150, 150);
+}
+
+p {
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 50em) {
+  .site-wrap {
+    width: 90%;
+  }
 }

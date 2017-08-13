@@ -1,9 +1,22 @@
 window.addEventListener('load', () => {
 
-  let countdown;
+  /*
+   * Elements 
+   */
+
   const timerDisplay = document.querySelector('.display__time-left');
   const endTime = document.querySelector('.display__end-time');
   const buttons = document.querySelectorAll('[data-time]');
+
+  /*
+   * Properties 
+   */
+
+  let countdown;
+
+  /*
+   * Functions
+   */
 
   function timer(seconds) {
     clearInterval(countdown);
@@ -42,6 +55,10 @@ window.addEventListener('load', () => {
     const seconds = parseInt(this.dataset.time);
     timer(seconds);
   }
+
+  /*
+   * Event listeners 
+   */
 
   buttons.forEach(button => button.addEventListener('click', startTimer));
   document.customForm.addEventListener('submit', function (e) {

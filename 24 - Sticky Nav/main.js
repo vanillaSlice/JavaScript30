@@ -5,6 +5,11 @@ window.addEventListener('load', () => {
    */
 
   const nav = document.querySelector('#main');
+
+  /*
+   * Properties 
+   */
+
   const topOfNav = nav.offsetTop;
 
   /*
