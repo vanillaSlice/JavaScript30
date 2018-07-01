@@ -31,6 +31,7 @@ window.addEventListener('load', () => {
   /*
    * Initialise
    */
+
   setInterval(setDate, 1000);
   setDate(true);
 

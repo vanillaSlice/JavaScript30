@@ -1,37 +1,38 @@
 @import url('../base.css');
+
 body {
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
   background: rgb(0, 255, 255);
-  font-size: 2rem;
+  color: rgb(34, 35, 36);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-size: 2rem;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+     -ms-flex-pack: center;
+   justify-content: center;
   min-height: 100%;
   min-height: 100vh;
-  color: rgb(34, 35, 36);
 }
 
 .inbox {
-  max-width: 40rem;
-  margin: 5rem auto;
   background: white;
   -webkit-box-shadow: 1rem 1rem rgb(0, 120, 255);
-  box-shadow: 1rem 1rem rgb(0, 120, 255);
+          box-shadow: 1rem 1rem rgb(0, 120, 255);
+  margin: 5rem auto;
+  max-width: 40rem;
 }
 
 .item {
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
+  border-bottom: 0.1rem solid #f1f1f1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border-bottom: 0.1rem solid #f1f1f1;
 }
 
 .item:last-child {
@@ -42,7 +43,7 @@ input:checked {
   background-color: #f9f9f9;
 }
 
-input:checked+p {
+input:checked + p {
   text-decoration: line-through;
 }
 
@@ -51,12 +52,12 @@ input[type="checkbox"] {
 }
 
 p {
+  border-left: 0.1rem solid #d1e2ff;
+  -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
   margin: 0;
   padding: 2rem;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border-left: 0.1rem solid #d1e2ff;
 }
 
 @media (max-width: 31.25em) {

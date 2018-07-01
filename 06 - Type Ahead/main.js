@@ -47,7 +47,7 @@ window.addEventListener('load', () => {
   searchInput.addEventListener('keyup', displayMatches);
 
   /*
-   * Init
+   * Initialise
    */
 
   fetch(endpoint)

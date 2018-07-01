@@ -101,7 +101,7 @@ window.addEventListener('load', () => {
   canvas.addEventListener('touchcancel', stopDrawing);
 
   /*
-   * Init
+   * Initialise
    */
 
   resize();
