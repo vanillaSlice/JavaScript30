@@ -82,7 +82,7 @@ window.addEventListener('load', () => {
   itemsList.addEventListener('click', toggleDone);
 
   /*
-   * Init
+   * Initialise
    */
 
   populateList(items, itemsList);

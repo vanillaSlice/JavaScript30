@@ -1,27 +1,28 @@
 @import url('../base.css');
+
 body {
+  -webkit-box-align: center;
+    -ms-flex-align: center;
+       align-items: center;
   background: rgb(0, 255, 255);
-  font-size: 2rem;
+  color: rgb(34, 35, 36);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-size: 2rem;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+     -ms-flex-pack: center;
+   justify-content: center;
   min-height: 100%;
   min-height: 100vh;
-  color: rgb(34, 35, 36);
 }
 
 .wrapper {
-  padding: 2rem;
-  max-width: 35rem;
   background: white;
   -webkit-box-shadow: 0.4rem 0.4rem 0 rgba(255, 0, 255, 0.6);
-  box-shadow: 0.4rem 0.4rem 0 rgba(255, 0, 255, 0.6);
+          box-shadow: 0.4rem 0.4rem 0 rgba(255, 0, 255, 0.6);
+  max-width: 35rem;
+  padding: 2rem;
 }
 
 h1 {
@@ -29,35 +30,35 @@ h1 {
 }
 
 .items {
-  text-align: left;
   list-style: none;
+  text-align: left;
 }
 
 .items li {
   border-bottom: 0.1rem solid rgb(150, 150, 150);
-  padding: 1rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 1rem 0;
 }
 
 .items label {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   cursor: pointer;
+  -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
 }
 
 .items input {
   display: none;
 }
 
-.items input+label:before {
+.items input + label:before {
   content: '⬜️';
   margin-right: 1rem;
 }
 
-.items input:checked+label:before {
+.items input:checked + label:before {
   content: '✔️';
 }
 
@@ -71,8 +72,8 @@ h1 {
 
 .add-items input,
 .edit-items input {
-  padding: 1rem;
-  outline: 0;
   border: 0.1rem solid rgb(150, 150, 150);
   color: inherit;
+  outline: 0;
+  padding: 1rem;
 }
