@@ -112,7 +112,7 @@ window.addEventListener('load', () => {
   takePhotoButton.addEventListener('click', takePhoto);
 
   /*
-   * Init 
+   * Initialise
    */
 
   getVideo();

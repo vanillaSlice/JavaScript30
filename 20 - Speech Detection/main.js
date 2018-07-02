@@ -40,7 +40,7 @@ window.addEventListener('load', () => {
   recognition.addEventListener('end', recognition.start);
 
   /*
-   * Init 
+   * Initialise
    */
 
   recognition.start();

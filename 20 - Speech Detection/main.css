@@ -1,4 +1,5 @@
 @import url('../base.css');
+
 body {
   background: rgb(0, 255, 255);
   font-size: 2rem;
@@ -9,29 +10,27 @@ p {
 }
 
 .words {
-  max-width: 50rem;
-  margin: 5rem auto;
   background: white;
-  -webkit-box-shadow: 1rem 1rem 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 1rem 1rem 0 rgba(0, 0, 0, 0.1);
-  padding: 1rem 2rem 1rem 5rem;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#d9eaf3), color-stop(4%, #fff)) 0 0.4rem;
   background-size: 100% 3rem;
-  position: relative;
-  line-height: 3rem;
   -webkit-box-shadow: 1rem 1rem rgb(0, 120, 255);
-  box-shadow: 1rem 1rem rgb(0, 120, 255);
+          box-shadow: 1rem 1rem rgb(0, 120, 255);
+  line-height: 3rem;
+  margin: 5rem auto;
+  max-width: 50rem;
+  padding: 1rem 2rem 1rem 5rem;
+  position: relative;
 }
 
 .words:before {
-  content: '';
-  position: absolute;
-  width: 0.4rem;
-  top: 0;
-  left: 3rem;
-  bottom: 0;
   border: 0.1rem solid;
   border-color: transparent #efe4e4;
+  bottom: 0;
+  content: '';
+  left: 3rem;
+  position: absolute;
+  top: 0;
+  width: 0.4rem;
 }
 
 @media (max-width: 35em) {
