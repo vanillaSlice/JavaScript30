@@ -1,92 +1,93 @@
 @import url('../base.css');
+
 html {
   background-color: rgb(255, 120, 255);
 }
 
 body {
+  -ms-flex-line-pack: center;
+       align-content: center;
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
+  color: rgb(34, 35, 36);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-orient: vertical;
+     -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+     -ms-flex-direction: column;
+         flex-direction: column;
+  font-size: 2rem;
+  -webkit-box-pack: center;
+     -ms-flex-pack: center;
+   justify-content: center;
   min-height: 100%;
   min-height: 100vh;
-  font-size: 2rem;
-  color: rgb(34, 35, 36);
 }
 
 h1 {
-  text-align: center;
   font-size: 7rem;
+  text-align: center;
 }
 
 .score {
   background: rgba(255, 255, 255, 0.2);
-  padding: 1rem;
   border-radius: 1rem;
+  padding: 1rem;
 }
 
 button {
-  border: none;
   background-color: rgba(255, 255, 255, 0.2);
-  font-family: inherit;
-  font-size: inherit;
+  border: none;
+  border-radius: 1rem;
   color: inherit;
   cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
   padding: 1rem;
-  border-radius: 1rem;
 }
 
 .game {
-  width: 60rem;
-  height: 40rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 40rem;
   margin: 0 auto;
+  width: 60rem;
 }
 
 .hole {
   -webkit-box-flex: 1;
-  -ms-flex: 1 0 33.33%;
-  flex: 1 0 33.33%;
+          -ms-flex: 1 0 33.33%;
+              flex: 1 0 33.33%;
   overflow: hidden;
   position: relative;
 }
 
 .hole:after {
-  display: block;
   background: url(dirt.svg) bottom center no-repeat;
   background-size: contain;
+  bottom: -3rem;
   content: '';
-  width: 100%;
+  display: block;
   height: 7rem;
   position: absolute;
+  width: 100%;
   z-index: 2;
-  bottom: -3rem;
 }
 
 .mole {
   background: url('mole.svg') bottom center no-repeat;
   background-size: 60%;
+  height: 100%;
   position: absolute;
   top: 100%;
-  width: 100%;
-  height: 100%;
   -webkit-transition: all 0.4s;
-  transition: all 0.4s;
+          transition: all 0.4s;
+  width: 100%;
 }
 
 .hole.up .mole {

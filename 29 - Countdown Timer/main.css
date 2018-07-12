@@ -1,11 +1,12 @@
 @import url('../base.css');
+
 html {
   background-color: rgb(120, 255, 255);
 }
 
 body {
-  text-align: center;
   color: white;
+  text-align: center;
 }
 
 .display__time-left {
@@ -18,12 +19,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+     -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+     -ms-flex-direction: column;
+         flex-direction: column;
   min-height: 100%;
   min-height: 100vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
 }
 
 .timer__controls {
@@ -32,41 +33,40 @@ body {
   display: flex;
 }
 
-.timer__controls>* {
+.timer__controls > * {
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+          -ms-flex: 1;
+              flex: 1;
 }
 
 .timer__controls form {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: flex;  
+  -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
 }
 
 .timer__controls input {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   border: 0;
+  -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
   padding: 2rem;
 }
 
 .timer__button {
-  background: none;
-  border: 0;
-  cursor: pointer;
-  font-size: 2rem;
-  text-transform: uppercase;
   background: rgba(0, 0, 0, 0.1);
+  border: 0;
   border-bottom: 0.3rem solid rgba(0, 0, 0, 0.2);
   border-right: 0.1rem solid rgba(0, 0, 0, 0.2);
-  padding: 1rem;
   color: inherit;
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 1rem;
   text-shadow: 0.2rem 0.2rem 0 rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
 }
 
 .timer__button:hover,
@@ -76,22 +76,22 @@ body {
 }
 
 .display {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+     -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+     -ms-flex-direction: column;
+         flex-direction: column;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+     -ms-flex-pack: center;
+   justify-content: center;
 }
 
 .display__end-time {
