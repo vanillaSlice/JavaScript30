@@ -1,11 +1,11 @@
 # JavaScript 30
 
-Following along the [JavaScript 30](https://javascript30.com/) challenge by
-[Wes Bos](http://wesbos.com/) - putting my own spin on solutions.
-
 [![Latest Release](https://img.shields.io/github/release/vanillaSlice/JavaScript30.svg)](https://github.com/vanillaSlice/JavaScript30/releases/latest)
 [![Build Status](https://img.shields.io/travis/com/vanillaSlice/JavaScript30/master.svg)](https://travis-ci.com/vanillaSlice/JavaScript30)
 [![License](https://img.shields.io/github/license/vanillaSlice/JavaScript30.svg)](LICENSE)
+
+Following along the [JavaScript 30](https://javascript30.com/) challenge by
+[Wes Bos](http://wesbos.com/) - putting my own spin on solutions.
 
 A deployed version can be viewed [here](https://vanillaslice.github.io/JavaScript30/).
 
