@@ -160,3 +160,10 @@ var cornify_replace = function () {
     hc -= 1;
   }
 };
+
+
+window.cornifyAdd = cornify_add;
+window.cornifyUpdateCount = cornify_updatecount;
+window.cornifySetCookie = cornify_setcookie;
+window.cornifyGetCookie = cornify_getcookie;
+window.cornifyReplace = cornify_replace;

@@ -2,30 +2,29 @@
  * Elements
  */
 
-const sliderImages = document.querySelectorAll('.slide-in');
+const sliderImgElements = document.querySelectorAll('.js-slide-in');
 
 /*
  * Functions
  */
 
-function debounce(func, wait = 20, immediate = true) {
+function debounce(func) {
   let timeout;
   return () => {
-    const context = this;
-    const args = arguments;
     const later = () => {
       timeout = null;
-      if (!immediate) func.apply(context, args);
     };
-    const callNow = immediate && !timeout;
+    const callNow = !timeout;
     clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
+    timeout = setTimeout(later, 20);
+    if (callNow) {
+      func.apply(this);
+    }
   };
 }
 
 function checkSlide() {
-  sliderImages.forEach((sliderImage) => {
+  sliderImgElements.forEach((sliderImage) => {
     const slideInAt = (window.scrollY + window.innerHeight) - (sliderImage.height / 2);
     const imageBottom = sliderImage.offsetTop + sliderImage.height;
     const isHalfShown = slideInAt > sliderImage.offsetTop;
@@ -39,7 +38,7 @@ function checkSlide() {
 }
 
 /*
- * Event listeners
+ * Initialise
  */
 
 window.addEventListener('scroll', debounce(checkSlide));

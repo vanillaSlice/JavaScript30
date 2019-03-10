@@ -1,3 +1,9 @@
+/*
+  eslint-disable
+    no-console,
+    no-unused-vars,
+*/
+
 // start with strings, numbers and booleans
 let age = 100;
 const age2 = age;
