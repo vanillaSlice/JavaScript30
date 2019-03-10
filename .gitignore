@@ -1,4 +1,4 @@
+.cache
 .DS_Store
-.eslintrc.json
-.vscode
-node_modules/
+build
+node_modules

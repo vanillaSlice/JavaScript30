@@ -1,0 +1,126 @@
+@import url('../styles/base.css');
+
+body {
+  background-color: white;
+  color: rgb(34, 35, 36);
+  font-size: 2rem;
+}
+
+header {
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
+  background-color: rgb(255, 120, 255);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50vh;
+  -webkit-box-pack: center;
+     -ms-flex-pack: center;
+   justify-content: center;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-size: 7vw;
+  text-shadow: 0.3rem 0.4rem 0 rgba(0, 0, 0, 0.3);
+}
+
+nav {
+  background: rgb(34, 35, 36);
+  position: relative;
+  top: 0;
+  -webkit-transition: all 0.5s;
+          transition: all 0.5s;
+  width: 100%;
+  z-index: 1;
+}
+
+.fixed-nav nav {
+  position: fixed;
+}
+
+li.logo {
+  background: white;
+  font-size: 3rem;
+  max-width: 0;
+  overflow: hidden;
+  -webkit-transition: all .5s;
+          transition: all .5s;
+}
+
+.fixed-nav li.logo {
+  max-width: 50rem;
+}
+
+.site-wrap {
+  background: white;
+  border: 0.3rem solid rgb(150, 150, 150);
+  -webkit-box-shadow: 0.5rem 0.5rem rgb(120, 255, 255), 1rem 1rem rgb(255, 120, 255);
+          box-shadow: 0.5rem 0.5rem rgb(120, 255, 255), 1rem 1rem rgb(255, 120, 255);
+  margin: 7rem auto;
+  max-width: 70rem;
+  padding: 4rem;
+  text-align: justify;
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+  -webkit-transition: -webkit-transform 0.5s;
+          transition: -webkit-transform 0.5s;
+          transition: transform 0.5s;
+          transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.fixed-nav .site-wrap {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+  -webkit-box-pack: center;
+     -ms-flex-pack: center;
+   justify-content: center;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  display: inline-block;
+  padding: 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s;
+          transition: all 0.2s;
+}
+
+li.logo a {
+  color: rgb(34, 35, 36);
+}
+
+p {
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 50em) {
+  .site-wrap {
+    width: 90%;
+  }
+}

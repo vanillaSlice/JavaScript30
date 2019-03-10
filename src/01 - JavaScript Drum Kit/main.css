@@ -1,0 +1,145 @@
+@import url('../styles/base.css');
+
+body {
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
+  background-color: rgb(255, 102, 255);
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2.4rem;
+  -webkit-box-pack: center;
+     -ms-flex-pack: center;
+   justify-content: center;
+  min-height: 100%;
+  min-height: 100vh;
+}
+
+main {
+  margin: 5rem 2rem;
+}
+
+.modal {
+  -ms-flex-line-pack: center;
+       align-content: center;
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
+  background-color: rgb(255, 102, 255);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+     -ms-flex-pack: center;
+   justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.modal-content {
+  border: 0.3rem solid rgb(102, 255, 255);
+  border-radius: 0.8rem;
+  -webkit-box-shadow: 0 0 0 0.3rem rgb(255, 102, 255), 0 0 0 0.6rem white;
+          box-shadow: 0 0 0 0.3rem rgb(255, 102, 255), 0 0 0 0.6rem white;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  text-shadow: 0.2rem 0.2rem rgb(34, 35, 36);
+  width: 50rem;
+}
+
+.modal-content button.ok {
+  background: none;
+  border: none;
+  border-radius: 0.8rem;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-shadow: 0.2rem 0.2rem rgb(34, 35, 36);
+  -webkit-transition: transform 0.1s linear;
+  -webkit-transition: -webkit-transform 0.1s linear;
+          transition: -webkit-transform 0.1s linear;
+          transition: transform 0.1s linear;
+          transition: transform 0.1s linear, -webkit-transform 0.1s linear;
+}
+
+.modal-content button.ok:hover,
+.modal-content button.ok:focus,
+.modal-content button.ok:active {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+h1 {
+  color: rgb(102, 255, 255);
+  font-size: 5.7rem;
+  text-align: center;
+  text-shadow: 0.3rem 0.3rem 0 rgb(34, 35, 36), 0.6rem 0.6rem 0 white;
+}
+
+.keys {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+          -ms-flex-flow: row wrap;
+     -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+              flex-flow: row wrap;
+  margin: 0 auto;
+  padding-top: 1.6rem;
+  width: 70rem;
+}
+
+.key {
+  background: transparent;
+  border: 0.3rem solid rgb(102, 255, 255);
+  border-radius: 0.8rem;
+  -webkit-box-shadow: 0 0 0 0.3rem rgb(34, 35, 36), 0 0 0 0.6rem white;
+          box-shadow: 0 0 0 0.3rem rgb(255, 102, 255), 0 0 0 0.6rem white;
+  cursor: pointer;
+  -webkit-box-flex: 1;
+          -ms-flex: 1 25%;
+              flex: 1 25%;
+  font-size: 2.6rem;
+  line-height: 1;
+  margin: 1.6rem;
+  padding: 1.6rem 0.8rem;
+  text-align: center;
+  text-shadow: 0.2rem 0.2rem rgb(34, 35, 36);
+  -webkit-transition: all 0.07s ease;
+          transition: all 0.07s ease;
+}
+
+.playing {
+  background-color: rgb(102, 255, 255);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+kbd {
+  display: block;
+  font-size: 5rem;
+}
+
+.sound {
+  color: inherit;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+@media (max-width: 50em) {
+  .modal-content {
+    width: 90%;
+  }
+  .keys {
+    width: 100%;
+  }
+}

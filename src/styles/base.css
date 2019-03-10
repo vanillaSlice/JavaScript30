@@ -1,0 +1,21 @@
+@import '../../node_modules/reset.css/reset.css';
+
+@font-face {
+  font-family: 'Neutra Text Bold Alt';
+  src: url('../fonts/Neutra Text Bold Alt.otf') format('opentype');
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Neutra Text Bold Alt', sans-serif;
+  line-height: 1.3;
+}

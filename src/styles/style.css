@@ -1,0 +1,45 @@
+@import url('./base.css');
+
+body {
+  background-color: rgb(247, 223, 30);
+  font-size: 2rem;
+}
+
+main {
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  width: 50rem;
+}
+
+h1 {
+  font-size: 7rem;
+  letter-spacing: 0.5rem;
+  text-shadow: 0.3rem 0.3rem 0 rgba(0, 255, 255, 0.6), 0.6rem 0.6rem 0 rgba(255, 0, 255, 0.6);
+}
+
+ul {
+  letter-spacing: 0.15rem;
+  margin-top: 2rem;
+}
+
+a {
+  color: rgb(34, 35, 36);
+  text-decoration: none;
+  transition: font 0.2s linear;
+}
+
+li > a:active,
+li > a:focus,
+li > a:hover {
+  font-size: 3rem;
+  text-shadow: 0.2rem 0.2rem 0 rgba(0, 255, 255, 0.6), 0.4rem 0.4rem 0 rgba(255, 0, 255, 0.6);
+}
+
+@media (max-width: 31.25em) {
+  h1 {
+    font-size: 5rem;
+  }
+  main {
+    width: 95%;
+  }
+}
