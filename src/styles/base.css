@@ -1,10 +1,5 @@
 @import '../../node_modules/reset.css/reset.css';
 
-@font-face {
-  font-family: 'Neutra Text Bold Alt';
-  src: url('./Neutra Text Bold Alt.otf') format('opentype');
-}
-
 *,
 *::before,
 *::after {
@@ -16,6 +11,6 @@ html {
 }
 
 body {
-  font-family: 'Neutra Text Bold Alt', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   line-height: 1.3;
 }
