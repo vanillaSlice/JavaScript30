@@ -1,3 +1,9 @@
+/*
+  eslint-disable
+    no-param-reassign,
+    no-console,
+*/
+
 const inventors = [{
   first: 'Albert',
   last: 'Einstein',
@@ -72,24 +78,58 @@ const inventors = [{
 },
 ];
 
-const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick', 'Beecher, Henry',
-  'Beethoven, Ludwig', 'Begin, Menachem', 'Belloc, Hilaire', 'Bellow, Saul', 'Benchley, Robert',
-  'Benenson, Peter', 'Ben-Gurion, David', 'Benjamin, Walter', 'Benn, Tony', 'Bennington, Chester',
-  'Benson, Leana', 'Bent, Silas', 'Bentsen, Lloyd', 'Berger, Ric', 'Bergman, Ingmar', 'Berio, Luciano',
-  'Berle, Milton', 'Berlin, Irving', 'Berne, Eric', 'Bernhard, Sandra', 'Berra, Yogi', 'Berry, Halle',
-  'Berry, Wendell', 'Bethea, Erin', 'Bevan, Aneurin', 'Bevel, Ken', 'Biden, Joseph', 'Bierce, Ambrose',
-  'Biko, Steve', 'Billings, Josh', 'Biondo, Frank', 'Birrell, Augustine', 'Black, Elk', 'Blair, Robert',
-  'Blair, Tony', 'Blake, William',
+const people = [
+  'Beck, Glenn',
+  'Becker, Carl',
+  'Beckett, Samuel',
+  'Beddoes, Mick',
+  'Beecher, Henry',
+  'Beethoven, Ludwig',
+  'Begin, Menachem',
+  'Belloc, Hilaire',
+  'Bellow, Saul',
+  'Benchley, Robert',
+  'Benenson, Peter',
+  'Ben-Gurion, David',
+  'Benjamin, Walter',
+  'Benn, Tony',
+  'Bennington, Chester',
+  'Benson, Leana',
+  'Bent, Silas',
+  'Bentsen, Lloyd',
+  'Berger, Ric',
+  'Bergman, Ingmar',
+  'Berio, Luciano',
+  'Berle, Milton',
+  'Berlin, Irving',
+  'Berne, Eric',
+  'Bernhard, Sandra',
+  'Berra, Yogi',
+  'Berry, Halle',
+  'Berry, Wendell',
+  'Bethea, Erin',
+  'Bevan, Aneurin',
+  'Bevel, Ken',
+  'Biden, Joseph',
+  'Bierce, Ambrose',
+  'Biko, Steve',
+  'Billings, Josh',
+  'Biondo, Frank',
+  'Birrell, Augustine',
+  'Black, Elk',
+  'Blair, Robert',
+  'Blair, Tony',
+  'Blake, William',
 ];
 
 // Array.prototype.filter()
 // 1. Filter the list of inventors for those who were born in the 1500's
-const fifteen = inventors.filter(inventor => inventor.year >= 1500 && inventor.year < 1600);
+const fifteen = inventors.filter(i => i.year >= 1500 && i.year < 1600);
 console.table(fifteen);
 
 // Array.prototype.map()
 // 2. Give us an array of the inventors' first and last names
-const fullNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
+const fullNames = inventors.map(i => `${i.first} ${i.last}`);
 console.log(fullNames);
 
 // Array.prototype.sort()
@@ -99,7 +139,7 @@ console.table(ordered);
 
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live?
-const totalYears = inventors.reduce((total, inventor) => total + inventor.passed - inventor.year, 0);
+const totalYears = inventors.reduce((t, i) => t + i.passed - i.year, 0);
 console.log(totalYears);
 
 // 5. Sort the inventors by years lived
@@ -126,11 +166,24 @@ console.log(alphabetical);
 
 // 8. Reduce Exercise
 // Sum up the instances of each of these
-const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car',
+const data = [
+  'car',
+  'car',
+  'truck',
+  'truck',
+  'bike',
+  'walk',
+  'car',
+  'van',
+  'bike',
+  'walk',
+  'car',
+  'van',
+  'car',
   'truck',
 ];
 const transportation = data.reduce((total, vehicle) => {
-  if (total.hasOwnProperty(vehicle)) {
+  if (Object.prototype.hasOwnProperty.call(total, vehicle)) {
     total[vehicle] += 1;
   } else {
     total[vehicle] = 1;

@@ -1,4 +1,10 @@
-@import url('../styles/base.css');
+@import '../../styles/base.css';
+
+:root {
+  --base: #f7df1e;
+  --blur: 1rem;
+  --opacity: 1;
+}
 
 html {
   background-color: rgb(0, 255, 255);
@@ -10,13 +16,13 @@ body {
   text-align: center;
 }
 
-main {
+.container {
   margin: 0 auto;
   padding: 5rem 2rem;
   width: 100rem;
 }
 
-h1 {
+.title {
   font-size: 5rem;
   letter-spacing: 0.4rem;
   text-shadow: 0.4rem 0.4rem 0 rgba(255, 0, 255, 0.6);
@@ -28,11 +34,11 @@ h1 {
   width: 100%;
 }
 
-input {
+.input {
   width: 10rem;
 }
 
-img {
+.image {
   background: var(--base);
   filter: blur(var(--blur));
   margin-top: 3rem;
@@ -41,21 +47,16 @@ img {
   width: 100%;
 }
 
-@media (max-width: 62.5em) {
-  main {
-    width: 100%;
-  }
-  label + input {
-    width: 100%;
-  }
-}
-
-:root {
-  --base: #f7df1e;
-  --blur: 1rem;
-  --opacity: 1;
-}
-
-.hl {
+.highlight {
   color: var(--base);
+}
+
+@media (max-width: 62.5em) {
+  .container {
+    width: 100%;
+  }
+
+  .label+.input {
+    width: 100%;
+  }
 }

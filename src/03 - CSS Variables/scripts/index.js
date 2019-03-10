@@ -2,7 +2,7 @@
  * Elements
  */
 
-const inputs = document.querySelectorAll('.controls input');
+const inputs = document.querySelectorAll('.js-input');
 
 /*
  * Functions
@@ -14,7 +14,7 @@ function handleUpdate() {
 }
 
 /*
- * Event listeners
+ * Initialise
  */
 
 inputs.forEach(input => input.addEventListener('change', handleUpdate));
