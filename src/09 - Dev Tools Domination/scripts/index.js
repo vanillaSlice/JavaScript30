@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 const dogs = [{
   name: 'Snickers',
   age: 2,

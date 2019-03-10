@@ -1,4 +1,4 @@
-@import url('../styles/base.css');
+@import '../../styles/base.css';
 
 body {
   background-color: white;
@@ -9,18 +9,18 @@ body {
 
 .search-form {
   border: 0.3rem solid rgb(150, 150, 150);
-  -webkit-box-shadow: 0.5rem 0.5rem rgb(120, 255, 255), 1rem 1rem rgb(255, 120, 255);
-          box-shadow: 0.5rem 0.5rem rgb(120, 255, 255), 1rem 1rem rgb(255, 120, 255);
+  box-shadow: 0.5rem 0.5rem rgb(120, 255, 255), 1rem 1rem rgb(255, 120, 255);
   margin: 5rem auto;
   width: 50rem;
 }
 
-input.search {
+.search-input {
   background-color: rgb(230, 230, 230);
   border: none;
   color: rgb(34, 35, 36);
   font-family: inherit;
   font-size: 4rem;
+  line-height: 1.1;
   margin: 0 auto;
   outline: 0;
   padding: 2rem;
@@ -34,26 +34,22 @@ input.search {
   position: relative;
 }
 
-.suggestions li {
+.suggestion-item {
   background-color: white;
   border-bottom: 0.1rem solid rgb(230, 230, 230);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-     -ms-flex-pack: justify;
-   justify-content: space-between;
+  justify-content: space-between;
   list-style: none;
   margin: 0;
   padding: 2rem;
   text-transform: capitalize;
 }
 
-span.population {
+.population {
   font-size: 1.5rem;
 }
 
-.hl {
+.highlight {
   background-color: rgb(0, 180, 255);
 }
 
@@ -61,7 +57,8 @@ span.population {
   .search-form {
     width: 90%;
   }
-  input.search {
+
+  .search-input {
     border: none;
   }
 }

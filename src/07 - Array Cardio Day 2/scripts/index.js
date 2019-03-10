@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 const people = [{
   name: 'Wes',
   year: 1988,

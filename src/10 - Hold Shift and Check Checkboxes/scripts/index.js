@@ -1,11 +1,13 @@
+/* eslint-disable no-param-reassign */
+
 /*
  * Elements
  */
 
-const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+const checkboxElements = document.querySelectorAll('.js-checkbox');
 
 /*
- * Properties
+ * Variables
  */
 
 let lastChecked;
@@ -17,7 +19,7 @@ let lastChecked;
 function handleCheck(event) {
   let inBetween = false;
   if (event.shiftKey && this.checked) {
-    checkboxes.forEach((checkbox) => {
+    checkboxElements.forEach((checkbox) => {
       if (checkbox === this || checkbox === lastChecked) {
         inBetween = !inBetween;
       }
@@ -30,7 +32,7 @@ function handleCheck(event) {
 }
 
 /*
- * Event listeners
+ * Initialise
  */
 
-checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
+checkboxElements.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
