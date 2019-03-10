@@ -29,22 +29,6 @@ body {
   font-size: 4rem;
 }
 
-.panel-1 {
-  background-image: url('../images/gryffindor.jpg');
-}
-
-.panel-2 {
-  background-image: url('../images/slytherin.jpg');
-}
-
-.panel-3 {
-  background-image: url('../images/hufflepuff.jpg');
-}
-
-.panel-4 {
-  background-image: url('../images/ravenclaw.jpg');
-}
-
 .panel__text {
   align-items: center;
   display: flex;
