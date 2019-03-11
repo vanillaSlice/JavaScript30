@@ -1,25 +1,24 @@
-@import url('../styles/base.css');
+@import '../../styles/base.css';
 
 body {
   background: rgb(0, 255, 255);
   font-size: 2rem;
 }
 
-p {
-  margin: 0 0 3rem;
-}
-
 .words {
   background: white;
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#d9eaf3), color-stop(4%, #fff)) 0 0.4rem;
   background-size: 100% 3rem;
-  -webkit-box-shadow: 1rem 1rem rgb(0, 120, 255);
-          box-shadow: 1rem 1rem rgb(0, 120, 255);
+  box-shadow: 1rem 1rem rgb(0, 120, 255);
   line-height: 3rem;
   margin: 5rem auto;
   max-width: 50rem;
   padding: 1rem 2rem 1rem 5rem;
   position: relative;
+}
+
+.words > * {
+  margin: 0 0 3rem;
 }
 
 .words:before {
