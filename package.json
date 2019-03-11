@@ -25,7 +25,7 @@
     "test": "run-s test:*",
     "test:lint": "run-s test:lint:*",
     "test:lint:css": "stylelint src/**/*.css",
-    "_test:lint:js": "eslint src/**/*.js",
+    "test:lint:js": "eslint src/**/*.js",
     "start": "parcel src/index.html -d build",
     "build": "parcel build src/index.html -d build --public-url ./"
   },
