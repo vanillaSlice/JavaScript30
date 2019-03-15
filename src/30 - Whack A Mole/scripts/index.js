@@ -2,13 +2,13 @@
  * Elements
  */
 
-const holeElements = document.querySelectorAll('.hole');
-const scoreBoard = document.querySelector('.score');
-const moles = document.querySelectorAll('.mole');
-const startButton = document.querySelector('.start');
+const scoreElement = document.querySelector('.js-score');
+const startBtn = document.querySelector('.js-start-btn');
+const holeElements = document.querySelectorAll('.js-hole');
+const moleElements = document.querySelectorAll('.js-mole');
 
 /*
- * Properties
+ * Variables
  */
 
 let lastHole;
@@ -40,7 +40,9 @@ function peep() {
   hole.classList.add('up');
   timeouts.push(setTimeout(() => {
     hole.classList.remove('up');
-    if (!timeUp) peep();
+    if (!timeUp) {
+      peep();
+    }
   }, time));
 }
 
@@ -48,7 +50,7 @@ function startGame() {
   timeouts.forEach(timeout => clearTimeout(timeout));
   timeouts = [];
   holeElements.forEach(hole => hole.classList.remove('up'));
-  scoreBoard.textContent = 0;
+  scoreElement.textContent = 0;
   timeUp = false;
   score = 0;
   peep();
@@ -58,15 +60,18 @@ function startGame() {
 }
 
 function bonk(e) {
-  if (!e.isTrusted) return; // fake click
+  // fake click
+  if (!e.isTrusted) {
+    return;
+  }
   score += 1;
   this.classList.remove('up');
-  scoreBoard.textContent = score;
+  scoreElement.textContent = score;
 }
 
 /*
- * Event Listeners
+ * Initialise
  */
 
-startButton.addEventListener('click', startGame);
-moles.forEach(mole => mole.addEventListener('click', bonk));
+startBtn.addEventListener('click', startGame);
+moleElements.forEach(mole => mole.addEventListener('click', bonk));

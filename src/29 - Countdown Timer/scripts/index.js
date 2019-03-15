@@ -2,12 +2,13 @@
  * Elements
  */
 
-const timerDisplay = document.querySelector('.display__time-left');
-const endTime = document.querySelector('.display__end-time');
-const buttons = document.querySelectorAll('[data-time]');
+const timerBtns = document.querySelectorAll('.js-timer-button');
+const timerFormElement = document.querySelector('.js-timer-form');
+const timeLeftElement = document.querySelector('.js-time-left');
+const endTimeElement = document.querySelector('.js-end-time');
 
 /*
- * Properties
+ * Variables
  */
 
 let countdown;
@@ -21,14 +22,14 @@ function displayTimeLeft(seconds) {
   const remainderSeconds = seconds % 60;
   const displayTime = `${minutes}:${(remainderSeconds < 10 ? '0' : '')}${remainderSeconds}`;
   document.title = displayTime;
-  timerDisplay.textContent = displayTime;
+  timeLeftElement.textContent = displayTime;
 }
 
 function displayEndTime(timestamp) {
   const end = new Date(timestamp);
   const hours = end.getHours();
   const minutes = end.getMinutes();
-  endTime.textContent = `Be back at ${(hours > 12 ? hours - 12 : hours)}:${(minutes < 10 ? '0' : '')}${minutes}`;
+  endTimeElement.textContent = `Be back at ${(hours > 12 ? hours - 12 : hours)}:${(minutes < 10 ? '0' : '')}${minutes}`;
 }
 
 function timer(seconds) {
@@ -53,13 +54,13 @@ function startTimer() {
 }
 
 /*
- * Event listeners
+ * Initialise
  */
 
-buttons.forEach(button => button.addEventListener('click', startTimer));
-document.customForm.addEventListener('submit', (e) => {
+timerBtns.forEach(button => button.addEventListener('click', startTimer));
+timerFormElement.addEventListener('submit', (e) => {
   e.preventDefault();
-  const minutes = this.minutes.value;
+  const minutes = e.target.minutes.value;
   timer(minutes * 60);
-  this.reset();
+  e.target.reset();
 });
