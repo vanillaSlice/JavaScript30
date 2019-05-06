@@ -7,7 +7,7 @@
 Following along the [JavaScript 30](https://javascript30.com/) challenge by
 [Wes Bos](http://wesbos.com/) - putting my own spin on solutions.
 
-A deployed version can be viewed [here](https://vanillaslice.github.io/JavaScript30/).
+A deployed version can be viewed [here](https://javascript30.mikelowe.xyz/).
 
 ## Getting Started
 
