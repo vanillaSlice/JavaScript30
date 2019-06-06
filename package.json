@@ -27,7 +27,7 @@
     "test:lint:css": "stylelint src/**/*.css",
     "test:lint:js": "eslint src/**/*.js",
     "start": "parcel src/index.html -d build",
-    "build": "parcel build src/index.html -d build --public-url ./"
+    "build": "parcel build src/index.html -d build --public-url https://javascript30.mikelowe.xyz/"
   },
   "devDependencies": {
     "autoprefixer": "^9.4.10",
